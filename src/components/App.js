@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import "../stylehseets/App.scss";
+import "../stylesheets/App.scss";
 import UserList from "./user/User";
-
+import Form from "./user/Form";
 
 class App extends React.Component {
   render() {
@@ -12,9 +12,9 @@ class App extends React.Component {
           <Switch>
             {/* <Route exact path="/" component={Login} /> */}
 
-            <Route path="/user" component={UserList} />
-            {/* <Route path="/user/form" component={Form} />
-            <Route path="/user/confirmation" component={Confirmation} />
+            {/* <Route path="/user" component={UserList} /> */}
+            <Route path="/user/form" component={Form} />
+            {/*<Route path="/user/confirmation" component={Confirmation} />
 
             <Route path="/gestor" component={GestorList} />
             <Route path="/gestor/details" component={GestorDetails} />

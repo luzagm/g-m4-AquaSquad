@@ -1,17 +1,16 @@
-import React from 'react';
+import React from "react";
 import ListUserItem from "./ListUserItem";
 import ListUserStatus from "./ListUserStatus";
-import '../../stylehseets/User.scss';
+import "../../stylesheets/User.scss";
 
-
-const UserList = (props) => {
-    return (
-        <div>
-            <h2 className="mainwrap__title">Solicitudes</h2>
-            <ListUserStatus />
-            <ListUserItem />
-        </div>
-    )
-}
+const UserList = props => {
+  return (
+    <div>
+      <h2 className="mainwrap__title">Solicitudes</h2>
+      <ListUserStatus />
+      <ListUserItem />
+    </div>
+  );
+};
 
 export default UserList;
