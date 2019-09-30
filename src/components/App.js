@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import "../stylesheets/App.scss";
+import Login from "./Login";
 import UserList from "./user/User";
 import Form from "./user/Form";
 
@@ -10,7 +11,7 @@ class App extends React.Component {
       <div className="App">
         <main>
           <Switch>
-            {/* <Route exact path="/" component={Login} /> */}
+            <Route exact path="/" component={Login} />
 
             {/* <Route path="/user" component={UserList} /> */}
             <Route path="/user/form" component={Form} />
