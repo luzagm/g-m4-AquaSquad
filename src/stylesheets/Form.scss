@@ -1,0 +1,20 @@
+@import './variables.scss';
+
+.request__form {
+  width: 700px;
+  height: 360px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
+}
+
+.request__form--title {
+  width: 283px;
+  height: 29px;
+  //font-family:
+  font-size: 24px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  margin: 31px 30px 17px 387px;
+  color: $colorSecundary;
+}

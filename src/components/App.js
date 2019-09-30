@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import "../stylesheets/App.scss";
-import UserList from "./user/User";
+//import UserList from "./user/User";
 import Form from "./user/Form";
 
 class App extends React.Component {

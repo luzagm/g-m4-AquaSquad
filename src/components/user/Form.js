@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./../Header";
 import Input from "./Inputs";
 // import Button from "../Button";
+import '../../stylesheets/Form.scss'
 
 class Form extends React.Component {
   render() {
