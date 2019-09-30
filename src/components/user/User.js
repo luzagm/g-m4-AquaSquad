@@ -4,6 +4,7 @@ import ListUserItem from "./ListUserItem";
 import ListUserStatus from "./ListUserStatus";
 import "../../stylesheets/components/User.scss";
 import "../../stylesheets/App.scss";
+import ListGestorDetail from "../leader/ListGestorDetail";
 
 const UserList = props => {
   return (
@@ -14,6 +15,7 @@ const UserList = props => {
         <ListUserStatus />
         <ListUserItem />
       </div>
+      <ListGestorDetail />
     </div>
   );
 };
