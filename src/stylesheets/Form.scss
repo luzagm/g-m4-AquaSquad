@@ -5,16 +5,50 @@
   height: 360px;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
   background-color: #ffffff;
+  margin: 22px 250px 22px 490px;
 }
 
 .request__form--title {
   width: 283px;
   height: 29px;
-  //font-family:
   font-size: 24px;
-  font-style: normal;
-  font-weight: bold;
-  line-height: normal;
-  margin: 31px 30px 17px 387px;
+  margin: 31px 387px 17px 30px;
   color: $colorSecundary;
+  padding-top: 31px;
+  font-weight: bold;
+}
+
+.request__form--inputs {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.request__form--label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 7px;
+}
+
+.request__form--input {
+  font-size: 14px;
+  height: 45px;
+  width: 310px;
+  background-color: #eeeeee;
+  border: solid 1px #ebeced;
+  color: #b1b1b1;
+}
+
+.request__form--submitButton {
+  margin-top: 20px;
+  width: 150px;
+  height: 36px;
+  border-radius: 5px;
+  background-color: #eeeeee;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 20px 280px 29px 270px;
+  color: #b1b1b1;
 }
