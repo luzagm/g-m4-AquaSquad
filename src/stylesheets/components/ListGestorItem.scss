@@ -1,0 +1,16 @@
+@import "../core/variables";
+
+.mainwrap__gestoritem{
+    display:grid;
+    grid-template-columns: 210px 1fr 100px;
+    padding:15px 75px 15px 30px;
+    font-size: 12px;
+    color:$colorTerciary;
+    border-bottom: solid 1px #ebeced;
+
+    &--status{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
