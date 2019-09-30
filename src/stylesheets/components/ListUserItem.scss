@@ -1,4 +1,4 @@
-@import "variables";
+@import "../core/variables";
 
 .mainwrap__useritem{
     display:grid;
@@ -8,4 +8,10 @@
     width: 700px;
     font-size: 12px;
     color:$colorTerciary;
+    border-bottom: 1px solid grey;
+
+    &--status{
+        display: flex;
+        align-items: center;
+    }
 }

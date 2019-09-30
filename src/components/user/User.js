@@ -1,7 +1,7 @@
 import React from 'react';
 import ListUserItem from "./ListUserItem";
 import ListUserStatus from "./ListUserStatus";
-import '../../stylehseets/User.scss';
+import '../../stylesheets/components/User.scss';
 
 
 const UserList = (props) => {

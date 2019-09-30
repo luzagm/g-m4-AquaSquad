@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../stylehseets/ListUserStatus.scss';
+import '../../stylesheets/components/ListUserStatus.scss';
 
 const ListUserStatus = () => {
     return (

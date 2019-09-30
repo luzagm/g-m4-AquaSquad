@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import "../stylehseets/App.scss";
+import "../stylesheets/core/variables.scss";
 import UserList from "./user/User";
 
 
