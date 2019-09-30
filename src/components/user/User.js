@@ -1,10 +1,16 @@
 import React from 'react';
 import ListUserItem from "./ListUserItem";
+import ListUserStatus from "./ListUserStatus";
+import '../../stylehseets/User.scss';
 
 
 const UserList = (props) => {
     return (
-        <ListUserItem />
+        <div>
+            <h2 className="mainwrap__title">Solicitudes</h2>
+            <ListUserStatus />
+            <ListUserItem />
+        </div>
     )
 }
 

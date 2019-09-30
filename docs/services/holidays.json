@@ -1,0 +1,19 @@
+{
+  "chapter": "Front",
+  "holidays": [
+    {
+      "date": "2019-09-25",
+      "employee_id": 1,
+      "earlier_fiscal_year": false,
+      "overtime": false,
+      "status": "pending"
+    },
+    {
+      "date": "2019-09-26",
+      "employee_id": 1,
+      "earlier_fiscal_year": false,
+      "overtime": false,
+      "status": "pending"
+    }
+  ]
+}
