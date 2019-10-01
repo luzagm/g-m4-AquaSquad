@@ -76,7 +76,7 @@ class App extends React.Component {
                 return <UserList holidaysData={this.state.holidays} />;
               }}
             />
-            {/* <Route path="/user/form" component={Form} /> */}
+            <Route exact path="/user/form" component={Form} />
             <Route exact path="/user/confirmation" component={Confirmation} />
 
             <Route

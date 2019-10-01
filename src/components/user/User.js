@@ -25,6 +25,9 @@ const UserList = props => {
         <ListUserStatus />
         <ul>{renderList(holidays)}</ul>
       </div>
+      <Link to="/user/form">
+        <Button name="Añadir petición" />
+      </Link>
     </div>
   );
 };
