@@ -5,7 +5,7 @@ import "../stylesheets/Header.scss";
 
 const Header = () => {
   return (
-    <header className="header">
+    <header className="header col-12">
       <Link to="/">
         <img className="header__logo" src={logo} alt="Liquid Holaday Manager" />
       </Link>

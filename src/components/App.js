@@ -27,7 +27,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <main>
+        <main className="main container-fluid">
+          <Header />
           <Switch>
             <Route exact path="/" component={Login} />
             <Route exact path="/user" component={UserList} />
