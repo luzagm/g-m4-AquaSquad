@@ -1,0 +1,60 @@
+@import "../core/variables";
+
+.detail {
+  &__box {
+    width: 700px;
+    padding: 30px;
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: 150px 350px 150px;
+    border-radius: 10px;
+    background-color: white;
+  }
+
+  &__description {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.67;
+    letter-spacing: 0.1px;
+    color: $colorDetailInfo;
+  }
+
+  &__info {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.67;
+    letter-spacing: 0.1px;
+
+    &--bold {
+      font-weight: bold;
+    }
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &--approve {
+      margin: 6px 0;
+      border: none;
+      height: 36px;
+      border-radius: 5px;
+      background-color: $colorApproveButton;
+      font-weight: 600;
+      text-align: center;
+      color: white;
+    }
+
+    &--deny {
+      margin: 6px 0;
+      border: none;
+      height: 36px;
+      border-radius: 5px;
+      background-color: $colorDenyButton;
+      font-weight: 600;
+      text-align: center;
+      color: white;
+    }
+  }
+}
