@@ -59,7 +59,7 @@ class App extends React.Component {
   //nos chiva en  consola los errores, y luego ya añadiréis control de errores en condiciones
 
   render() {
-    if (this.state === null) {
+    if (this.state.users === [] || this.state.holidays === []) {
       return <p>Loading</p>;
     }
 
