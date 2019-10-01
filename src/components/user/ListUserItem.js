@@ -1,8 +1,6 @@
-import React from 'react';
-import Circle from '../Circle';
-import '../../stylesheets/components/ListUserItem.scss';
-
-
+import React from "react";
+import Circle from "../Circle";
+import "../../stylesheets/ListUserItem.scss";
 const ListUserItem = (props) => {
     return (
         <div className="mainwrap__useritem">
