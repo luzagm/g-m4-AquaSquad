@@ -7,10 +7,13 @@ import "../../stylesheets/App.scss";
 
 const UserList = props => {
   return (
-    <div className="mainwrap col-9">
-      <h2 className="mainwrap__title">Solicitudes</h2>
-      <ListUserStatus />
-      <ListUserItem />
+    <div className="mainwrapmain row">
+      <AsideBar />
+      <div className="mainwrap col-9">
+        <h2 className="mainwrap__title">Solicitudes</h2>
+        <ListUserStatus />
+        <ListUserItem />
+      </div>
     </div>
   );
 };

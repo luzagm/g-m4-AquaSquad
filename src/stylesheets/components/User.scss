@@ -1,10 +1,12 @@
 @import "../core/variables";
 
-.mainwrap {
-  padding: 0;
-  margin-top: 20px;
-  background-color: white;
+.mainwrapmain {
+  margin: 20px 200px;
+  height: 100vh;
 }
+
 .mainwrap__title {
   padding: 30px;
+  margin: 0;
+  background-color: white;
 }
