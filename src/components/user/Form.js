@@ -3,6 +3,7 @@ import Header from "./../Header";
 import Input from "./Inputs";
 // import Button from "../Button";
 import "../../stylesheets/Form.scss";
+import "../../assets/icons/calendar-icon.svg";
 
 class Form extends React.Component {
   render() {
