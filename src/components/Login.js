@@ -7,6 +7,7 @@ import "./../stylesheets/components/Login.scss";
 const Login = () => {
   return (
     <React.Fragment>
+      {/* <Header /> */}
       <div className="login__container">
         <h1 className="login__title">LOGIN</h1>
         <form>
