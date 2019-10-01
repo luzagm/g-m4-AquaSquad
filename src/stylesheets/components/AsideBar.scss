@@ -1,0 +1,33 @@
+@import "../core/variables";
+
+.asidebar__container {
+  text-align: center;
+  height: 747px;
+  width: 220px;
+  color: white;
+  background-color: $colorSecundary;
+  //   font-weight: bold;
+}
+.asidebar__img {
+  height: 80px;
+  width: 80px;
+  margin-top: 41px;
+}
+.asidebar__name {
+  height: 17px;
+  margin-bottom: 10px;
+}
+.asidebar__job {
+  color: #ffd000;
+  font-size: 10px;
+  height: 17px;
+}
+.asidebar__paid {
+  margin-top: 23px;
+}
+.asidebar__time {
+  font-size: 25px;
+  font-weight: bold;
+  //   height: 55px;
+  //   width: 62px;
+}
