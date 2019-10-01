@@ -1,8 +1,18 @@
 import React from "react";
 import "../stylesheets/components/Filters.scss";
 
+
 const renderName = data => {
-  return data.map((user, index) => {
+  const listOrdered = data.sort(function (a, b) {
+    if (a.name > b.name) {
+      return 1;
+    }
+    if (a.name < b.name) {
+      return -1;
+    }
+    return 0
+  })
+  return listOrdered.map((user, index) => {
     return (
       <option value={user.name} key={index}>
         {user.name}
@@ -23,14 +33,12 @@ const renderChapter = data => {
 
 const Filters = props => {
   const { data } = props;
-
   return (
     <form className="gestor__wrap--filter">
       <select className="gestor__wrap--selectfilter" name="user">
         <option>Usuario</option>
         {renderName(data)}
       </select>
-
       <select className="gestor__wrap--selectfilter" name="chapter">
         <option>Chapter</option>
         {renderChapter(data)}
