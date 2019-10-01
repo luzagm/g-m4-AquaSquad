@@ -3,7 +3,7 @@ import React from "react";
 import GestorDetailInfo from "./GestorDetailInfo";
 import "../../stylesheets/components/ListGestorDetail.scss";
 
-const ListGestorDetail = props => {
+const GestorDetail = props => {
   return (
     <div className="detailmain">
       <h2 className="detailwrap__title">Solicitudes proyecto Wadus</h2>
@@ -12,4 +12,4 @@ const ListGestorDetail = props => {
   );
 };
 
-export default ListGestorDetail;
+export default GestorDetail;

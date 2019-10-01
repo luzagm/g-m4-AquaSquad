@@ -1,14 +1,14 @@
 import React from "react";
-import "../../stylesheets/components/ListUserStatus.scss";
+import "../../stylesheets/components/ListGestorStatus.scss";
 
-const ListUserStatus = () => {
+const ListGestorStatus = () => {
   return (
     <div className="status row col-12">
       <p className="col-4">Fecha (inicio/fin)</p>
-      <p className="col-5">Estado</p>
+      <p className="col-5">Usuario</p>
       <p className="col-3">Proyecto</p>
     </div>
   );
 };
 
-export default ListUserStatus;
+export default ListGestorStatus;

@@ -3,19 +3,13 @@ import ListUserItem from "./ListUserItem";
 import ListUserStatus from "./ListUserStatus";
 import "../../stylesheets/components/User.scss";
 import "../../stylesheets/App.scss";
-import ListGestorDetail from "../leader/ListGestorDetail";
 
 const UserList = props => {
   return (
-    <div>
-      <div className="mainwrap col-9">
-        <h2 className="mainwrap__title">Solicitudes</h2>
-        <ListUserStatus />
-        <ListUserItem />
-      </div>
-      <div>
-        <ListGestorDetail />
-      </div>
+    <div className="mainwrap col-9">
+      <h2 className="mainwrap__title">Solicitudes</h2>
+      <ListUserStatus />
+      <ListUserItem />
     </div>
   );
 };
