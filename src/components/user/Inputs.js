@@ -3,7 +3,7 @@ import React from "react";
 class Input extends React.Component {
   render() {
     return (
-      <div className="fill-in_item">
+      <div className={`fill-in_item ${this.props.classLogin} `}>
         <label className="request__form--label" htmlFor={this.props.id}>
           {this.props.label}
         </label>

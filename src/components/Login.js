@@ -11,8 +11,8 @@ const Login = () => {
       <div className="login__container">
         <h1 className="login__title">LOGIN</h1>
         <form>
-          <Input placeholder="Usuario" />
-          <Input placeholder="Contraseña" />
+          <Input classLogin="fillInput" placeholder="Usuario" />
+          <Input classLogin="fillInput" placeholder="Contraseña" />
           <button className="btnPrueba">Acceder</button>
           {/* <Button /> */}
         </form>
