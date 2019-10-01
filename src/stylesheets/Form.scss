@@ -2,10 +2,10 @@
 
 .request__form {
   width: 700px;
-  // height: 360px;
+  height: 360px;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
   background-color: #ffffff;
-  margin: 22px 250px 22px 490px;
+  margin: 22px 250px 0 490px;
 
   &--title {
     margin: 31px auto 17px;
@@ -25,9 +25,8 @@
 
   &--label {
     display: block;
-    margin-bottom: 7px;
     width: 37px;
-    height: 14px;
+    // height: 14px;
     font-family: Graphik;
     font-size: 12px;
     font-weight: 500;
@@ -36,6 +35,11 @@
     line-height: normal;
     letter-spacing: 0.1px;
     color: #3d4750;
+  }
+
+  &--label.date {
+    height: 14px;
+    margin-bottom: 7px;
   }
 
   &--input {
@@ -59,7 +63,6 @@
   }
 
   &--submitButton {
-    margin-top: 20px;
     width: 150px;
     height: 36px;
     border-radius: 5px;
@@ -69,7 +72,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 20px 280px 29px 270px;
+    margin: 0px 280px 29px 270px;
     color: #b1b1b1;
     border-style: none;
   }

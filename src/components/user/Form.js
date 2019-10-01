@@ -16,6 +16,7 @@ class Form extends React.Component {
             <div className="request__form--inputs">
               <div className="left-inputs">
                 <Input
+                  classLabel="date"
                   classInput="request__date"
                   label="Desde"
                   placeholder="13/09/2019"
@@ -33,6 +34,7 @@ class Form extends React.Component {
               </div>
               <div className="right-inputs">
                 <Input
+                  classLabel="date"
                   classInput="request__date"
                   label="Hasta"
                   placeholder="16/09/2019"
