@@ -13,7 +13,28 @@
       "employee_id": 1,
       "earlier_fiscal_year": false,
       "overtime": false,
-      "status": "pending"
+      "status": "enjoyed"
+    },
+    {
+      "date": "2019-09-25",
+      "employee_id": 1,
+      "earlier_fiscal_year": false,
+      "overtime": false,
+      "status": "approved"
+    },
+    {
+      "date": "2019-09-26",
+      "employee_id": 1,
+      "earlier_fiscal_year": false,
+      "overtime": false,
+      "status": "rejected"
+    },
+    {
+      "date": "2019-09-25",
+      "employee_id": 1,
+      "earlier_fiscal_year": false,
+      "overtime": false,
+      "status": "company-holidays"
     }
   ]
 }
