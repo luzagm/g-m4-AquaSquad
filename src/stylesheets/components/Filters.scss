@@ -1,0 +1,19 @@
+@import "../core/variables";
+
+.gestor__wrap--filter {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 23px 0 30px;
+  width: 700px;
+}
+
+.gestor__wrap--selectfilter {
+  width: 200px;
+  height: 45px;
+  border-radius: 5px;
+  border: solid 1px #ebeced;
+  background-color: white;
+  font-size: 14px;
+  font-weight: 500;
+  color: #445870;
+}
