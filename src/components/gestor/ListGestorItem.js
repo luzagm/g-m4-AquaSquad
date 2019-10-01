@@ -10,7 +10,6 @@ const ListGestorItem = props => {
         <Circle />
         <p>Jesús Esteban Sánchez</p>
       </div>
-
       <p className="col-3">Wadus</p>
     </div>
   );
