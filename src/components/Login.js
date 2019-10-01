@@ -2,6 +2,8 @@ import React from "react";
 import Header from "./Header";
 import Input from "./user/Inputs";
 import "./../stylesheets/Login.scss";
+import { Link } from "react-router-dom";
+import Button from "./Button";
 // import "./Button"
 
 const Login = () => {
@@ -13,8 +15,9 @@ const Login = () => {
         <form>
           <Input placeholder="Usuario" />
           <Input placeholder="Contraseña" />
-          <button className="btnPrueba">Acceder</button>
-          {/* <Button /> */}
+          <Link to="/user/form">
+            <Button name="Acceder" />
+          </Link>
         </form>
       </div>
     </React.Fragment>
