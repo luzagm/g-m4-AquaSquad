@@ -18,7 +18,7 @@ const GestorList = props => {
     <div className="gestormain">
       <div className="mainwrap">
         <h2 className="mainwrap__title">Solicitudes</h2>
-        <Filters />
+        <Filters data={data} />
         <ListGestorStatus />
         <ul>{renderList(data)}</ul>
       </div>
