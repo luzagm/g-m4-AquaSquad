@@ -2,12 +2,14 @@
 
 .gestor__wrap--filter {
   display: flex;
-  justify-content: space-between;
-  padding: 0 23px 0 30px;
-  width: 700px;
+  justify-content: center;
+  /*   padding: 0 23px 0 30px; */
+  margin-bottom: 18px;
+  /* width: 700px; */
 }
 
 .gestor__wrap--selectfilter {
+  margin: 0 10px;
   width: 200px;
   height: 45px;
   border-radius: 5px;

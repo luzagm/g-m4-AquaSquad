@@ -1,9 +1,13 @@
 import React from "react";
 import Header from "./Header";
 import Input from "./user/Inputs";
+<<<<<<< HEAD
 import "./../stylesheets/Login.scss";
 import { Link } from "react-router-dom";
 import Button from "./Button";
+=======
+import "./../stylesheets/components/Login.scss";
+>>>>>>> dev
 // import "./Button"
 
 const Login = () => {
