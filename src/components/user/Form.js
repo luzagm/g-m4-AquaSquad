@@ -15,12 +15,12 @@ class Form extends React.Component {
             <div className="request__form--inputs">
               <div className="left-inputs">
                 <Input label="Desde" placeholder="13/09/2019" />
-                <Input type="select" placeholder="Jefe de proyecto" />
-                <Input type="select" placeholder="Chapter" />
+                <Input classInput="request__job" type="select" placeholder="Jefe de proyecto" />
+                <Input classInput="request__chapter" type="select" placeholder="Chapter" />
               </div>
               <div className="right-inputs">
                 <Input label="Hasta" placeholder="16/09/2019" />
-                <Input type="text" placeholder="Asunto" />
+                <Input classInput="request__text" type="text" placeholder="Asunto" />
               </div>
             </div>
             <button className="request__form--submitButton">Enviar</button>
