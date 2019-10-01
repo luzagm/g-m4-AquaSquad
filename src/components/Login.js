@@ -10,12 +10,13 @@ const Login = () => {
       <div className="login__container">
         <h1 className="login__title">LOGIN</h1>
         <form>
-          <Input classLogin="fillInput" placeholder="Usuario" />
-          <Input classLogin="fillInput" placeholder="Contraseña" />
-          <Link to="/user/form">
-            <div className="login__button--container">
-              <Button name="Acceder" />
-            </div>
+          <Input placeholder="Usuario" />
+          <Input placeholder="Contraseña" />
+          <Link to="/user">
+            <Button name="Acceder" />
+          </Link>
+          <Link to="/gestor">
+            <Button name="Acceder Gestor" />
           </Link>
         </form>
       </div>

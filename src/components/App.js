@@ -6,7 +6,7 @@ import UserList from "./user/User";
 import GestorList from "./gestor/GestorList";
 import GestorDetails from "./gestor/GestorDetail";
 import Confirmation from "./Confirmation";
-/* import Form from "./user/Form"; */
+import Form from "./user/Form";
 import "../stylesheets/App.scss";
 import "../stylesheets/core/variables.scss";
 
@@ -76,7 +76,7 @@ class App extends React.Component {
                 return <UserList holidaysData={this.state.holidays} />;
               }}
             />
-            {/* <Route path="/user/form" component={Form} /> */}
+            <Route exact path="/user/form" component={Form} />
             <Route exact path="/user/confirmation" component={Confirmation} />
 
             <Route
@@ -87,7 +87,7 @@ class App extends React.Component {
               }}
             />
             <Route exact path="/gestor/details" component={GestorDetails} />
-            {/* <Route path="/gestor/confirmation" component={Confirmation} /> */}
+            <Route path="/gestor/confirmation" component={Confirmation} />
           </Switch>
         </main>
       </div>

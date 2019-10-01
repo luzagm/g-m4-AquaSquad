@@ -4,6 +4,8 @@ import ListUserStatus from "./ListUserStatus";
 import AsideBar from "../AsideBar";
 import "../../stylesheets/components/User.scss";
 import "../../stylesheets/App.scss";
+import Button from "../Button";
+import { Link } from "react-router-dom";
 
 const renderList = data => {
   return data.map((user, index) => {
@@ -23,6 +25,9 @@ const UserList = props => {
         <ListUserStatus />
         <ul>{renderList(holidays)}</ul>
       </div>
+      <Link to="/user/form">
+        <Button name="Añadir petición" />
+      </Link>
     </div>
   );
 };
