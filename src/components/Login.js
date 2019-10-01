@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Input from "./user/Inputs";
-import "./../stylesheets/Login.scss";
+import "./../stylesheets/components/Login.scss";
 // import "./Button"
 
 const Login = () => {
