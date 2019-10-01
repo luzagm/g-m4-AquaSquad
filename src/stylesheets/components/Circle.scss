@@ -3,7 +3,26 @@
 .mainwrap__useritem--circle {
   width: 12px;
   height: 12px;
-  background-color: #3d4750;
   margin-right: 10px;
   border-radius: 50%;
+}
+
+.pending {
+  background-color: #ff9e1b;
+}
+
+.enjoyed {
+  background-color: #3d4750;
+}
+
+.approved {
+  background-color: #b9c800;
+}
+
+.rejected {
+  background-color: #c80400;
+}
+
+.company-holidays {
+  background-color: #d8d8d8;
 }

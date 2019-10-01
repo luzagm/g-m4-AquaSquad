@@ -5,14 +5,23 @@ import AsideBar from "../AsideBar";
 import "../../stylesheets/components/User.scss";
 import "../../stylesheets/App.scss";
 
+const renderList = data => {
+  return data.map((user, index) => {
+    return <ListUserItem userHolidays={user} key={index} />;
+  });
+};
+
 const UserList = props => {
+  const { holidaysData } = props;
+  const holidays = holidaysData.holidays;
+
   return (
     <div className="mainwrapmain row">
       <AsideBar />
       <div className="mainwrap col-9">
         <h2 className="mainwrap__title">Solicitudes</h2>
         <ListUserStatus />
-        <ListUserItem />
+        <ul>{renderList(holidays)}</ul>
       </div>
     </div>
   );
