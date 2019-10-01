@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Input from "./user/Inputs";
+import "./../stylesheets/Login.scss";
 // import "./Button"
 
 const Login = () => {
@@ -12,6 +13,7 @@ const Login = () => {
         <form>
           <Input placeholder="Usuario" />
           <Input placeholder="Contraseña" />
+          <button className="btnPrueba">Acceder</button>
           {/* <Button /> */}
         </form>
       </div>
