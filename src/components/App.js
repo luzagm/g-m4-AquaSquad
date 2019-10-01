@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import "../stylesheets/core/variables.scss";
+import Login from "./Login";
 import UserList from "./user/User";
 //copiar estos dos para aside
 import Button from "./Button";
@@ -8,6 +8,8 @@ import doll from "../images/doll.png";
 import "../stylesheets/components/AsideBar.scss";
 import "../stylesheets/components/Button.scss";
 //para aside
+import Form from "./user/Form";
+import "../stylesheets/App.scss";
 
 class App extends React.Component {
   render() {
@@ -29,11 +31,11 @@ class App extends React.Component {
 
         <main>
           <Switch>
-            {/* <Route exact path="/" component={Login} /> */}
+            <Route exact path="/" component={Login} />
 
-            <Route path="/user" component={UserList} />
-            {/* <Route path="/user/form" component={Form} />
-            <Route path="/user/confirmation" component={Confirmation} />
+            {/* <Route path="/user" component={UserList} /> */}
+            <Route path="/user/form" component={Form} />
+            {/*<Route path="/user/confirmation" component={Confirmation} />
 
             <Route path="/gestor" component={GestorList} />
             <Route path="/gestor/details" component={GestorDetails} />
