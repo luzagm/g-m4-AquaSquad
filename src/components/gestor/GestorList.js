@@ -7,6 +7,7 @@ import "../../stylesheets/App.scss";
 
 const renderList = data => {
   return data.map((user, index) => {
+    console.log(user);
     return <ListGestorItem user={user} key={index} />;
   });
 };
