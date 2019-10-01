@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "./Header";
 import Input from "./user/Inputs";
 import { Link } from "react-router-dom";
 import Button from "./Button";
@@ -8,7 +7,6 @@ import "./../stylesheets/components/Login.scss";
 const Login = () => {
   return (
     <React.Fragment>
-      <Header />
       <div className="login__container">
         <h1 className="login__title">LOGIN</h1>
         <form>
@@ -16,6 +14,9 @@ const Login = () => {
           <Input placeholder="Contraseña" />
           <Link to="/user">
             <Button name="Acceder" />
+          </Link>
+          <Link to="/gestor">
+            <Button name="Acceder Gestor" />
           </Link>
         </form>
       </div>

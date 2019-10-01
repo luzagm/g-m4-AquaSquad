@@ -16,7 +16,6 @@ const AsideBar = props => {
       </div>
       <div className="asidebar__time">4.4</div>
       <h5>Hours</h5>
-      <Button />
     </div>
   );
 };
