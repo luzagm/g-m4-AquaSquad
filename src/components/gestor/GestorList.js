@@ -7,7 +7,7 @@ import '../../stylesheets/components/Gestor.scss';
 import '../../stylesheets/App.scss';
 
 
-const LeadList = (props) => {
+const GestorList = (props) => {
     return (
         <div className="gestormain">
             <Header />
@@ -21,4 +21,4 @@ const LeadList = (props) => {
     )
 }
 
-export default LeadList;
+export default GestorList;

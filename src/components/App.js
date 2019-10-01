@@ -1,13 +1,11 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import "../stylesheets/core/variables.scss";
-import UserList from "./user/User";
-import GestorList from "./leader/LeadGestor";
-import Confirmation from "./Confirmation";
 import Login from "./Login";
-
-
-
+import UserList from "./user/User";
+import GestorList from "./gestor/GestorList";
+import Confirmation from "./Confirmation";
+// import Form from "./user/Form";
+import "../stylesheets/App.scss";
 
 class App extends React.Component {
 
@@ -30,11 +28,9 @@ class App extends React.Component {
         <main>
           <Switch>
             <Route exact path="/" component={Login} />
-
             <Route exact path="/user" component={UserList} />
             {/* <Route path="/user/form" component={Form} /> */}
             <Route exact path="/user/confirmation" component={Confirmation} />
-
             <Route path="/gestor" component={GestorList} />
             {/* <Route path="/gestor/details" component={GestorDetails} />
             <Route path="/gestor/confirmation" component={Confirmation} /> */}
