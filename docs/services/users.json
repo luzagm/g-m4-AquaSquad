@@ -5,7 +5,8 @@
     "chapter_id": 1,
     "chapter_name": "Front",
     "is_leader": false,
-    "time_off": 20
+    "time_off": 20,
+    "project": "Wadus"
   },
   {
     "name": "Laura",
@@ -13,7 +14,8 @@
     "chapter_id": 2,
     "chapter_name": "Front",
     "is_leader": false,
-    "time_off": 20
+    "time_off": 20,
+    "project": "Wadus"
   },
   {
     "name": "Luz",
@@ -21,7 +23,8 @@
     "chapter_id": 3,
     "chapter_name": "Front",
     "is_leader": false,
-    "time_off": 20
+    "time_off": 20,
+    "project": "Liquid Squad"
   },
   {
     "name": "Isa",
@@ -29,7 +32,8 @@
     "chapter_id": 4,
     "chapter_name": "Front",
     "is_leader": false,
-    "time_off": 20
+    "time_off": 20,
+    "project": "Lorem Ipsum"
   },
   {
     "name": "Sara",
@@ -37,7 +41,8 @@
     "chapter_id": 5,
     "chapter_name": "Front",
     "is_leader": false,
-    "time_off": 20
+    "time_off": 20,
+    "project": "Et siaame lorem ipsum"
   },
   {
     "name": "Ana",
@@ -45,6 +50,7 @@
     "chapter_id": 6,
     "chapter_name": "Front",
     "is_leader": false,
-    "time_off": 20
+    "time_off": 20,
+    "project": "Liquid Squad"
   }
 ]
