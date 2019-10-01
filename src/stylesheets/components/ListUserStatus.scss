@@ -1,14 +1,10 @@
 @import "../core/variables";
 
-
-.mainwrap__status{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding:10px 75px 10px 30px;
-    width: 700px;
-    background-color:$colorPrimary;
-    font-weight: bold;
-    font-size: 12px;
-    color:$colorSecundary;
+.mainwrap__status {
+  margin: 0;
+  padding: 15px 0 0 15px;
+  background-color: $colorPrimary;
+  font-weight: bold;
+  font-size: 12px;
+  color: $colorSecundary;
 }
-
