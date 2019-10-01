@@ -1,14 +1,16 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import "../stylesheets/core/variables.scss";
+import "../stylesheets/App.scss";
+import Header from "./Header";
 import UserList from "./user/User";
-
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <main>
+        <main className="main container-fluid">
+          <Header />
           <Switch>
             {/* <Route exact path="/" component={Login} /> */}
 
