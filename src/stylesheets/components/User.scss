@@ -1,15 +1,10 @@
 @import "../core/variables";
 
-.usermain{
-    width:100vw;
-    height: 100vh;
-    background-color:#f5f5f5;
+.mainwrap {
+  padding: 0;
+  margin-top: 20px;
+  background-color: white;
 }
-.mainwrap{
-    margin-top:20px;
-    width: 700px;
-    background-color:white;
-}
-.mainwrap__title{
-    padding: 31px 0 34px 30px;
+.mainwrap__title {
+  padding: 30px;
 }

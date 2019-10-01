@@ -3,5 +3,6 @@
   "email": "josemaria.delanieta@accenture.com",
   "chapter_id": 1,
   "chapter_name": "Front",
-  "is_leader": false
+  "is_leader": false,
+  "time_off": 20
 }
