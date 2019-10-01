@@ -3,8 +3,10 @@ import { Route, Switch } from "react-router-dom";
 import "../stylesheets/core/variables.scss";
 import UserList from "./user/User";
 //copiar estos dos para aside
+import Button from "./Button";
 import doll from "../images/doll.png";
 import "../stylesheets/components/AsideBar.scss";
+import "../stylesheets/components/Button.scss";
 //para aside
 
 class App extends React.Component {
@@ -21,7 +23,8 @@ class App extends React.Component {
           </div>
           <div className="asidebar__time">4.4</div>
           <h5>Hours</h5>
-          {/* <button>Solicitar</button> */}
+
+          <Button />
         </div>
 
         <main>
