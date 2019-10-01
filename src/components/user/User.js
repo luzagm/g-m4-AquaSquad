@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../Header";
 import ListUserItem from "./ListUserItem";
 import ListUserStatus from "./ListUserStatus";
+import AsideBar from "../AsideBar";
 import "../../stylesheets/components/User.scss";
 import "../../stylesheets/App.scss";
 import ListGestorDetail from "../leader/ListGestorDetail";
@@ -16,6 +17,10 @@ const UserList = props => {
         <ListUserItem />
       </div>
       <ListGestorDetail />
+
+      <React.Fragment>
+        <AsideBar />
+      </React.Fragment>
     </div>
   );
 };

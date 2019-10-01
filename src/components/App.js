@@ -3,7 +3,6 @@ import { Route, Switch } from "react-router-dom";
 import "../stylesheets/core/variables.scss";
 import UserList from "./user/User";
 
-
 class App extends React.Component {
   render() {
     return (
