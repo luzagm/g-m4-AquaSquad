@@ -1,20 +1,24 @@
 import React from "react";
 import Header from "./Header";
 import Input from "./user/Inputs";
+import { Link } from "react-router-dom";
+import Button from "./Button";
 import "./../stylesheets/components/Login.scss";
-// import "./Button"
 
 const Login = () => {
   return (
     <React.Fragment>
-      <Header />
+      {/* <Header /> */}
       <div className="login__container">
         <h1 className="login__title">LOGIN</h1>
         <form>
           <Input placeholder="Usuario" />
           <Input placeholder="Contraseña" />
-          <button className="btnPrueba">Acceder</button>
-          {/* <Button /> */}
+          <Link to="/user/form">
+            <div className="login__button--container">
+              <Button name="Acceder" />
+            </div>
+          </Link>
         </form>
       </div>
     </React.Fragment>
