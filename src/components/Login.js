@@ -14,7 +14,7 @@ const Login = () => {
         <form>
           <Input placeholder="Usuario" />
           <Input placeholder="Contraseña" />
-          <Link to="/user/form">
+          <Link to="/user">
             <Button name="Acceder" />
           </Link>
         </form>
