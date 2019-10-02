@@ -12,6 +12,7 @@ import "../stylesheets/core/variables.scss";
 
 const dataurl = "./services/users.json";
 const holidaysurl = "./services/holidays.json";
+
 class App extends React.Component {
   constructor() {
     super();
@@ -19,33 +20,46 @@ class App extends React.Component {
       users: [],
       holidays: []
     };
-    this.getUserData = this.getUserData.bind(this);
-    this.getHolidaysData = this.getHolidaysData.bind(this);
+
+    // this.getUserData = this.getUserData.bind(this);
+    // this.getHolidaysData = this.getHolidaysData.bind(this);
   }
+
   componentDidMount() {
-    this.getUserData();
-    this.getHolidaysData();
-  }
-  getUserData() {
-    fetch(dataurl)
-      .then(response => response.json())
-      .then(data => {
-        this.setState({ users: data });
+    Promise.all([fetch(dataurl), fetch(holidaysurl)])
+      .then(([res1, res2]) => Promise.all([res1.json(), res2.json()]))
+      .then(([usersData, holidaysData]) => {
+        this.setState({
+          users: usersData,
+          holidays: holidaysData
+        });
       });
   }
-  getHolidaysData() {
-    fetch(holidaysurl)
-      .then(response => response.json())
-      .then(data => {
-        // if (data.holidays.employee_id === 1) {
-        //   this.setState({ holidays: data });
-        // }
-        const holidaysUser = data.holidays.filter(
-          user => user.employee_id === 1
-        ); // Cuando tengamos el Id del usuario lo metemos aquí con variable
-        this.setState({ holidays: holidaysUser });
-      });
-  }
+
+  // getUserData() {
+  //   fetch(dataurl)
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       this.setState({ users: data });
+  //     });
+  //   return this.state.users;
+  // }
+
+  // getHolidaysData() {
+  //   fetch(holidaysurl)
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       // if (data.holidays.employee_id === 1) {
+  //       //   this.setState({ holidays: data });
+  //       // }
+  //       const holidaysUser = data.holidays.filter(
+  //         user => user.employee_id === 1
+  //       ); // Cuando tengamos el Id del usuario lo metemos aquí con variable
+  //       this.setState({ holidays: holidaysUser });
+  //     });
+  //   return this.state.holidays;
+  // }
+
   // fetch(nombredevariableconjson)
   // .then(response=>response.json())
   // Promise.resolve(nombredevariableconjson)
@@ -56,9 +70,12 @@ class App extends React.Component {
   // .catch((err) => console.error(err))
   //nos chiva en  consola los errores, y luego ya añadiréis control de errores en condiciones
   render() {
-    if (this.state.users === [] || this.state.holidays === []) {
+    console.log(this.state);
+
+    if (this.state === []) {
       return <p>Loading</p>;
     }
+
     return (
       <div className="App">
         <main className="main container-fluid">
@@ -78,7 +95,7 @@ class App extends React.Component {
               exact
               path="/gestor"
               render={() => {
-                return <GestorList data={this.state.users} />;
+                return <GestorList data={this.state} />;
               }}
             />
             <Route exact path="/gestor/details" component={GestorDetails} />
