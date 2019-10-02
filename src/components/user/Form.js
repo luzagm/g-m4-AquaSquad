@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./../Header";
 import Input from "./Inputs";
-// import Button from "../Button";
+import Button from "../Button";
 import "../../stylesheets/Form.scss";
 import "../../assets/icons/calendar-icon.svg";
 
@@ -9,7 +9,6 @@ class Form extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Header />
         <main className="request__wrap">
           <form className="request__form">
             <h2 className="request__form--title">Solicitud de vacaciones</h2>
@@ -48,7 +47,7 @@ class Form extends React.Component {
             </div>
             <button className="request__form--submitButton">Enviar</button>
           </form>
-          {/* <Button /> */}
+          <Button />
         </main>
       </React.Fragment>
     );

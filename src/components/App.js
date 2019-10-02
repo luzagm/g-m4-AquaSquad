@@ -6,7 +6,7 @@ import UserList from "./user/User";
 import GestorList from "./gestor/GestorList";
 import GestorDetails from "./gestor/GestorDetail";
 import Confirmation from "./Confirmation";
-/* import Form from "./user/Form"; */
+import Form from "./user/Form";
 import "../stylesheets/App.scss";
 import "../stylesheets/core/variables.scss";
 
@@ -32,7 +32,7 @@ class App extends React.Component {
           <Switch>
             <Route exact path="/" component={Login} />
             <Route exact path="/user" component={UserList} />
-            {/* <Route path="/user/form" component={Form} /> */}
+            <Route path="/user/form" component={Form} />
             <Route exact path="/user/confirmation" component={Confirmation} />
 
             <Route exact path="/gestor" component={GestorList} />
