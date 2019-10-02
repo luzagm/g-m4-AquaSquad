@@ -18,10 +18,12 @@ class App extends React.Component {
     super();
     this.state = {
       users: [],
-      holidays: []
+      holidays: [],
+      project: ""
     };
     this.getUserData = this.getUserData.bind(this);
     this.getHolidaysData = this.getHolidaysData.bind(this);
+    this.handleSelect = this.handleSelect.bind(this);
   }
 
   componentDidMount() {
@@ -44,6 +46,18 @@ class App extends React.Component {
         this.setState({ holidays: data });
       });
   }
+
+  handleSelect(event) {
+    const selectProject = event.currentTarget.value;
+    this.setState({ project: selectProject });
+    // console.log(selectProject);
+  }
+
+  // filterProject = () => {
+  //   this.state.filter(userProject => {
+  //     return userProject.project.includes(project);
+  //   });
+  // };
 
   // fetch(nombredevariableconjson)
   // .then(response=>response.json())
@@ -85,7 +99,9 @@ class App extends React.Component {
                 return (
                   <GestorList
                     data={this.state.users}
-                    getHolidaysData={this.state.holidays}
+                    holidaysData={this.state.holidays}
+                    handleSelect={this.handleSelect}
+                    project={this.state.project}
                   />
                 );
               }}

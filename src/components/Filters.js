@@ -21,8 +21,19 @@ const renderChapter = data => {
   });
 };
 
+const renderProject = data => {
+  return data.map((user, index) => {
+    return (
+      <option value={user.project} key={index}>
+        {user.project}
+      </option>
+    );
+  });
+};
+
 const Filters = props => {
-  const { data } = props;
+  const { data, handleSelect } = props;
+  // console.log(data.project);
 
   return (
     <form className="gestor__wrap--filter">
@@ -36,10 +47,13 @@ const Filters = props => {
         {renderChapter(data)}
       </select>
 
-      <select className="gestor__wrap--selectfilter" name="project">
-        <option>Proyecto</option>
-        <option value="Liquid Squad">Liquid Squad</option>
-        <option value="Wadus project">Wadus project</option>
+      <select
+        className="gestor__wrap--selectfilter"
+        name="project"
+        onChange={handleSelect}
+      >
+        <option value="">Proyecto</option>
+        {renderProject(data)}
       </select>
     </form>
   );
