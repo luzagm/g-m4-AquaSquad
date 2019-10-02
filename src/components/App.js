@@ -19,11 +19,15 @@ class App extends React.Component {
     this.state = {
       users: [],
       holidays: [],
+      userName: "",
+      chapter: "",
       project: ""
     };
     this.getUserData = this.getUserData.bind(this);
     this.getHolidaysData = this.getHolidaysData.bind(this);
-    this.handleSelect = this.handleSelect.bind(this);
+    this.getUserName = this.getUserName.bind(this);
+    this.getChapter = this.getChapter.bind(this);
+    this.getProject = this.getProject.bind(this);
   }
 
   componentDidMount() {
@@ -47,17 +51,21 @@ class App extends React.Component {
       });
   }
 
-  handleSelect(event) {
+  getProject(event) {
     const selectProject = event.currentTarget.value;
-    this.setState({ project: selectProject });
-    // console.log(selectProject);
+    this.setState({ chapter: selectProject });
   }
 
-  // filterProject = () => {
-  //   this.state.filter(userProject => {
-  //     return userProject.project.includes(project);
-  //   });
-  // };
+  getChapter(event) {
+    const selectChapter = event.currentTarget.value;
+    console.log(selectChapter);
+    this.setState({ chapter: selectChapter });
+  }
+
+  getUserName(event) {
+    const selectUserName = event.currentTarget.value;
+    this.setState({ userName: selectUserName });
+  }
 
   // fetch(nombredevariableconjson)
   // .then(response=>response.json())
@@ -100,7 +108,11 @@ class App extends React.Component {
                   <GestorList
                     data={this.state.users}
                     holidaysData={this.state.holidays}
-                    handleSelect={this.handleSelect}
+                    getUserName={this.getUserName}
+                    getChapter={this.getChapter}
+                    getProject={this.getProject}
+                    userName={this.state.userName}
+                    chapter={this.state.chapter}
                     project={this.state.project}
                   />
                 );

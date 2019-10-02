@@ -32,25 +32,32 @@ const renderProject = data => {
 };
 
 const Filters = props => {
-  const { data, handleSelect } = props;
-  // console.log(data.project);
+  const { data, getUserName, getChapter, getProject } = props;
 
   return (
     <form className="gestor__wrap--filter">
-      <select className="gestor__wrap--selectfilter" name="user">
-        <option>Usuario</option>
+      <select
+        className="gestor__wrap--selectfilter"
+        name="user"
+        onChange={getUserName}
+      >
+        <option value="">Usuario</option>
         {renderName(data)}
       </select>
 
-      <select className="gestor__wrap--selectfilter" name="chapter">
-        <option>Chapter</option>
+      <select
+        className="gestor__wrap--selectfilter"
+        name="chapter"
+        onChange={getChapter}
+      >
+        <option value="">Chapter</option>
         {renderChapter(data)}
       </select>
 
       <select
         className="gestor__wrap--selectfilter"
         name="project"
-        onChange={handleSelect}
+        onChange={getProject}
       >
         <option value="">Proyecto</option>
         {renderProject(data)}
