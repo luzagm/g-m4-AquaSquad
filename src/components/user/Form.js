@@ -1,14 +1,16 @@
 import React from "react";
-import Header from "./../Header";
+import AsideBar from "./../AsideBar";
 import Input from "./Inputs";
 import Button from "../Button";
 import "../../stylesheets/Form.scss";
 import "../../assets/icons/calendar-icon.svg";
+// import "../../stylesheets/components/AsideBar.scss";
 
 class Form extends React.Component {
   render() {
     return (
       <React.Fragment>
+        <AsideBar />
         <main className="request__wrap">
           <form className="request__form">
             <h2 className="request__form--title">Solicitud de vacaciones</h2>
