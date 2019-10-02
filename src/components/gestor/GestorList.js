@@ -7,30 +7,23 @@ import Filters from "../Filters";
 import "../../stylesheets/components/Gestor.scss";
 import "../../stylesheets/App.scss";
 
-const renderHolidaysData = holidays => {
-  return holidays.holidays.map(holiday => {
-    return holiday.date;
-  });
-};
 
-const renderUserData = users => {
-  return users.map(user => {
-    return user;
-  });
-};
+// const renderUserData = userData => {
+//   console.log(userData)
+//   return userData
+//     .map(user => {
+//       return user
+//     })
+// }
 
-const renderList = (usersData, holidaysData) => {
-  return <ListGestorItem usersData={usersData} holidaysData={holidaysData} />;
+const renderList = (usersData, userHolidays) => {
+  return <ListGestorItem usersData={usersData} userHolidays={userHolidays.holidays} />;
 };
 
 const GestorList = props => {
-  const { data } = props;
-  console.log(props);
-  const holidays = data.holidays;
-  console.log(holidays);
-  const users = data.users;
-  const holidaysData = renderHolidaysData(holidays);
-  const usersData = renderUserData(users);
+  const { data, userData, userHolidays } = props;
+  // const user = renderUserData(userData);
+  // const holiday = renderHolidayData(userHolidays);
 
   return (
     <div className="gestormain">
@@ -38,9 +31,9 @@ const GestorList = props => {
         <AsideBar />
         <div className="col-9">
           <h2 className="mainwrap__title">Gestión de solicitudes</h2>
-          <Filters />
+          <Filters userData={userData} />
           <ListGestorStatus />
-          {renderList(usersData, holidaysData)}
+          {renderList(userData, userHolidays)}
         </div>
       </div>
     </div>
