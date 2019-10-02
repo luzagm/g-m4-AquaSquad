@@ -12,6 +12,7 @@
   {
     "name": "Laura",
     "email": "josemaria.delanieta@accenture.com",
+    "employee_id": 2,
     "chapter_id": 2,
     "chapter_name": "Front",
     "is_leader": false,
