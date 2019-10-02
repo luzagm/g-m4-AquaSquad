@@ -63,7 +63,7 @@ class App extends React.Component {
               exact
               path="/user"
               render={() => {
-                return <UserList holidaysData={this.state.holidays} />;
+                return <UserList holidays={this.state.holidays} />;
               }}
             />
             <Route exact path="/user/form" component={Form} />

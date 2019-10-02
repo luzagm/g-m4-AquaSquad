@@ -14,7 +14,9 @@ const renderList = data => {
 };
 
 const UserList = props => {
-  const { holidaysData } = props;
+  const { holidays } = props;
+  const holidaysData = holidays.holidays;
+  console.log(holidaysData)
 
   return (
     <div className="mainwrapmain row">
