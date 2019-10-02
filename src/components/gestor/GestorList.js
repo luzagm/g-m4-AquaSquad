@@ -14,6 +14,7 @@ const renderList = data => {
 
 const GestorList = props => {
   const { data } = props;
+  console.log(data);
 
   return (
     <div className="gestormain">

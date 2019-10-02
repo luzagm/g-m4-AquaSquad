@@ -69,21 +69,25 @@ class App extends React.Component {
           <Header />
           <Switch>
             <Route exact path="/" component={Login} />
-            <Route
+            {/* <Route
               exact
               path="/user"
               render={() => {
                 return <UserList holidaysData={this.state.holidays} />;
-              }}
+              }} */}
             />
             <Route exact path="/user/form" component={Form} />
             <Route exact path="/user/confirmation" component={Confirmation} />
-
             <Route
               exact
               path="/gestor"
               render={() => {
-                return <GestorList data={this.state.users} />;
+                return (
+                  <GestorList
+                    data={this.state.users}
+                    getHolidaysData={this.state.holidays}
+                  />
+                );
               }}
             />
             <Route exact path="/gestor/details" component={GestorDetails} />
