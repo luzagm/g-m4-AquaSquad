@@ -4,6 +4,7 @@ import ListGestorStatus from "./ListGestorStatus";
 import Filters from "../Filters";
 import "../../stylesheets/components/Gestor.scss";
 import "../../stylesheets/App.scss";
+import AsideBar from "../AsideBar";
 
 const renderList = data => {
   return data.map((user, index) => {
@@ -17,7 +18,8 @@ const GestorList = props => {
 
   return (
     <div className="gestormain">
-      <div className="mainwrap">
+      <AsideBar />
+      <div className="mainwrap col-9">
         <h2 className="mainwrap__title">Solicitudes</h2>
         <Filters data={data} />
         <ListGestorStatus />
