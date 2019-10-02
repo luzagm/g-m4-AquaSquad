@@ -2,32 +2,36 @@ import React from "react";
 import Circle from "../Circle";
 import "../../stylesheets/components/ListGestorItem.scss";
 
-const renderName = (usersData) => {
-  return usersData.map(user => {
-    return (<p>{user.name}</p>)
-  })
-};
+//  const renderName = dataResult => {
+//    return dataResult.map(user => {
+//      return <p>{user.name}</p>;
+//    });
+//  };
 
-const renderDate = (userHolidays) => {
-  return userHolidays.map(holiday => {
-    return (<p>{holiday.date.replace(/^(\d{4})-(\d{2})-(\d{2})$/g, "$3/$2/$1")}</p>)
-  })
-};
+// const renderDate = dataResult => {
+//   console.log(dataResult.holidays);
+//   return dataResult.holidays.map((date, index) => {
+//     return <p id={index}>{date.date}</p>;
+//   });
+//   //    return dataResult.holidays.map((holiday, key) => {
+//   //    return <p dataResult={holiday.date} key={employee_id}/>;
+//   //  });
+// };
 
 const ListGestorItem = props => {
-  const { usersData, userHolidays } = props;
-  console.log(usersData)
+  const { dataResult, dataHolidays } = props;
+  console.log(dataHolidays);
 
   return (
     <div className="mainwrap__gestoritem row col-12">
+      <p className="col-4">{dataHolidays.date}</p>
+
       <div className="mainwrap__gestoritem--status col-5">
         <Circle />
-        {renderName(usersData)}
-        {/*  <p>{user.chapter_id}</p>  Usaremos este ID para saber qué vacaciones pendiente tiene este usuario    {renderDate(holidaysData)}*/}
+        <p>{dataResult.name}</p>
+        {/* <p>{user.chapter_id}</p>  Usaremos este ID para saber qué vacaciones pendiente tiene este usuario */}
       </div>
-      <p className="col-4">{renderDate(userHolidays)}</p>
-
-      <p className="col-3">{usersData.project}</p>
+      <p className="col-3">{dataResult.project}</p>
     </div>
   );
 };

@@ -13,7 +13,6 @@ import "../stylesheets/core/variables.scss";
 const dataurl = "./services/users.json";
 const holidaysurl = "./services/holidays.json";
 
-
 class App extends React.Component {
   constructor() {
     super();
@@ -29,7 +28,6 @@ class App extends React.Component {
   }
 
   getData() {
-    // Esta cadena está bien, quizá le metería un catch por si acaso
     Promise.all([fetch(dataurl), fetch(holidaysurl)])
       .then(([res1, res2]) => Promise.all([res1.json(), res2.json()]))
       .then(([usersData, holidaysData]) => {
@@ -38,13 +36,7 @@ class App extends React.Component {
           holidays: holidaysData
         });
       })
-      .catch(err => console.error(err)); // si haces npm start, la primera vez, clickas en el gestor, donde se pinta la info que nos interesa. ahi en consola nos tiene que pasar el estado que pasamos por props... esa info se pasa SOLO la primera vez
-    // no se qué es "gestor", pero entiendo que este es el componente principal (se llama App y tiene las rutas) así que se monta solo una vez. Solo se llama a getData una vez
-
-    // a qué te refieres con "esa info se pasa solo la primera vez?" cuando recargas la web no se pasa??
-    // cuando recargas peta, el estado se queda en vacío. te paso pantallazos en telegram
-
-    // estás haciendo holidays.holidays.map, no debería ser holidays.map? <-- en el componente hijo, que no está abierto, pero lo veo en los pantallazos
+      .catch(err => console.error(err));
   }
 
   // fetch(nombredevariableconjson)
@@ -57,10 +49,10 @@ class App extends React.Component {
   // .catch((err) => console.error(err))
   //nos chiva en  consola los errores, y luego ya añadiréis control de errores en condiciones
   render() {
-
     if (this.state === []) {
       return <p>Loading</p>;
     }
+
     return (
       <div className="App">
         <main className="main container-fluid">
@@ -80,7 +72,7 @@ class App extends React.Component {
               exact
               path="/gestor"
               render={() => {
-                return <GestorList data={this.state} userData={this.state.users} userHolidays={this.state.holidays} />; //necesitamos pasar this.state para que al recargar nos lleguen los datos, para userData
+                return <GestorList dataResult={this.state} />; //necesitamos pasar this.state para que al recargar nos lleguen los datos, para userData
               }}
             />
             <Route exact path="/gestor/details" component={GestorDetails} />

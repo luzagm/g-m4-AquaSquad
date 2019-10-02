@@ -7,23 +7,37 @@ import Filters from "../Filters";
 import "../../stylesheets/components/Gestor.scss";
 import "../../stylesheets/App.scss";
 
+// const renderHolidays = dataHolidays => {
+//   return dataHolidays.map(date => {
+//     return date;
+//   });
+// };
 
-// const renderUserData = userData => {
-//   console.log(userData)
-//   return userData
-//     .map(user => {
-//       return user
-//     })
-// }
-
-const renderList = (usersData, userHolidays) => {
-  return <ListGestorItem usersData={usersData} userHolidays={userHolidays.holidays} />;
-};
+// const renderList = (dataResult, dataHolidays) => {
+//   return dataResult.map((user, index) => {
+//     return (
+//       <ListGestorItem
+//         dataResult={user}
+//         dataHolidays={dataHolidays}
+//         key={index}
+//       />
+//     );
+//   });
+// };
 
 const GestorList = props => {
-  const { data, userData, userHolidays } = props;
-  // const user = renderUserData(userData);
-  // const holiday = renderHolidayData(userHolidays);
+  const { dataResult } = props;
+  const holidaysData = dataResult.holidays.holidays;
+  const usersData = dataResult.users;
+  console.log(holidaysData);
+  console.log(usersData);
+
+  if (holidaysData.employee_id === usersData.employee_id) {
+    console.log(holidaysData);
+  }
+  // const dataResultDate = dataResult.pop();
+  // const dataHolidays = dataResultDate.holidays;
+  // const holidayPlease = renderHolidays(dataHolidays);
 
   return (
     <div className="gestormain">
@@ -31,9 +45,9 @@ const GestorList = props => {
         <AsideBar />
         <div className="col-9">
           <h2 className="mainwrap__title">Gestión de solicitudes</h2>
-          <Filters userData={userData} />
+          {/* <Filters dataResult={dataResult} /> */}
           <ListGestorStatus />
-          {renderList(userData, userHolidays)}
+          <ListGestorItem />
         </div>
       </div>
     </div>
