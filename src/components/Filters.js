@@ -2,7 +2,7 @@ import React from "react";
 import "../stylesheets/components/Filters.scss";
 
 const renderName = data => {
-  const listOrdered = data.sort(function(a, b) {
+  const listOrdered = data.sort(function (a, b) {
     if (a.name > b.name) {
       return 1;
     }
@@ -31,16 +31,17 @@ const renderChapter = data => {
 };
 
 const Filters = props => {
-  const { userData } = props;
+  const { usersData } = props;
+
   return (
     <form className="gestor__wrap--filter">
       <select className="gestor__wrap--selectfilter" name="user">
         <option>Usuario</option>
-        {renderName(userData)}
+        {renderName(usersData)}
       </select>
       <select className="gestor__wrap--selectfilter" name="chapter">
         <option>Chapter</option>
-        {renderChapter(userData)}
+        {renderChapter(usersData)}
       </select>
 
       <select className="gestor__wrap--selectfilter" name="project">

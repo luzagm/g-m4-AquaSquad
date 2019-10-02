@@ -25,7 +25,6 @@ const ListUserItem = props => {
   const { userHolidays } = props;
   const holidaysStatus = userHolidays.status;
   const date = userHolidays.date;
-  console.log(holidaysStatus)
 
   return (
     <div className="mainwrap__useritem row col-12">

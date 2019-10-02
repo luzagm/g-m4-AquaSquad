@@ -13,13 +13,14 @@ const GestorList = props => {
   const holidaysData = dataResult.holidays.holidays;
   const usersData = dataResult.users;
 
+
   return (
     <div className="gestormain">
       <div className="mainwrap__gestor row">
         <AsideBar />
         <div className="col-9">
           <h2 className="mainwrap__title">Gestión de solicitudes</h2>
-          {/* <Filters dataResult={dataResult} /> */}
+          <Filters usersData={usersData} />
           <ListGestorStatus />
           <ListGestorItem usersData={usersData} holidaysData={holidaysData} />
         </div>
