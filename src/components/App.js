@@ -40,8 +40,10 @@ class App extends React.Component {
         // if (data.holidays.employee_id === 1) {
         //   this.setState({ holidays: data });
         // }
-        console.log(data)
-        this.setState({ holidays: data });
+        const holidaysUser = data.holidays.filter(
+          user => user.employee_id === 1
+        ); // Cuando tengamos el Id del usuario lo metemos aquí con variable
+        this.setState({ holidays: holidaysUser });
       });
   }
   // fetch(nombredevariableconjson)
@@ -88,5 +90,3 @@ class App extends React.Component {
   }
 }
 export default App;
-
-
