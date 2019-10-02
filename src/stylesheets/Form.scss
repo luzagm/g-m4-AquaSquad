@@ -129,3 +129,20 @@
     padding: 6px 6px 0 20px;
   }
 }
+
+.wrap__aside {
+  display: grid;
+  grid-column: 1 / 4;
+}
+
+.wrap__form {
+  display: grid;
+  //padding: 0 75px 0 30px;
+  //height: 30px;
+  grid-column: 4 / 12;
+}
+
+.request__wrap {
+  display: grid;
+  height: 900px;
+}
