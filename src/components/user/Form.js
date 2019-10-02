@@ -2,6 +2,8 @@ import React from "react";
 import Input from "./Inputs";
 import { Link } from "react-router-dom";
 import Button from "../Button";
+import "../../stylesheets/Form.scss";
+import "../../assets/icons/calendar-icon.svg";
 
 class Form extends React.Component {
   render() {
@@ -51,6 +53,7 @@ class Form extends React.Component {
               name="Añadir otra petición"
             />
           </form>
+          <Button />
         </main>
       </React.Fragment>
     );
