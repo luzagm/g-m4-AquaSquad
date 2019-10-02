@@ -12,7 +12,6 @@ import "../stylesheets/core/variables.scss";
 
 const dataurl = "./services/users.json";
 const holidaysurl = "./services/holidays.json";
-
 class App extends React.Component {
   constructor() {
     super();
@@ -23,12 +22,10 @@ class App extends React.Component {
     this.getUserData = this.getUserData.bind(this);
     this.getHolidaysData = this.getHolidaysData.bind(this);
   }
-
   componentDidMount() {
     this.getUserData();
     this.getHolidaysData();
   }
-
   getUserData() {
     fetch(dataurl)
       .then(response => response.json())
@@ -36,33 +33,30 @@ class App extends React.Component {
         this.setState({ users: data });
       });
   }
-
   getHolidaysData() {
     fetch(holidaysurl)
       .then(response => response.json())
       .then(data => {
+        // if (data.holidays.employee_id === 1) {
+        //   this.setState({ holidays: data });
+        // }
+        console.log(data)
         this.setState({ holidays: data });
       });
   }
-
   // fetch(nombredevariableconjson)
   // .then(response=>response.json())
-
   // Promise.resolve(nombredevariableconjson)
   //devuelve una promesa con el valor que le pases
-
   // .then(funcionQuePromesaLaRespuesta)
-
   //Promise.reject(mock de un error)
   //y así en lugar de entrar por el then, entrará por el catch
   // .catch((err) => console.error(err))
   //nos chiva en  consola los errores, y luego ya añadiréis control de errores en condiciones
-
   render() {
     if (this.state.users === [] || this.state.holidays === []) {
       return <p>Loading</p>;
     }
-
     return (
       <div className="App">
         <main className="main container-fluid">
@@ -78,7 +72,6 @@ class App extends React.Component {
             />
             <Route exact path="/user/form" component={Form} />
             <Route exact path="/user/confirmation" component={Confirmation} />
-
             <Route
               exact
               path="/gestor"
@@ -94,5 +87,6 @@ class App extends React.Component {
     );
   }
 }
-
 export default App;
+
+
