@@ -1,5 +1,6 @@
 import React from "react";
 import "../../stylesheets/components/GestorDetailInfo.scss";
+import AsideBarButton from "../AsideBarButton";
 
 const GestorDetailInfo = () => {
   return (
@@ -28,6 +29,7 @@ const GestorDetailInfo = () => {
       <div className="detail__button">
         <button className="detail__button--approve">Aprobar</button>
         <button className="detail__button--deny ">Rechazar</button>
+        <AsideBarButton />
       </div>
     </div>
   );
