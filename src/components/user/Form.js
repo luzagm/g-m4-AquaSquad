@@ -1,6 +1,7 @@
 import React from "react";
 import AsideBar from "../AsideBar";
 import Input from "./Inputs";
+import { Link } from "react-router-dom";
 import Button from "../Button";
 import "../../stylesheets/Form.scss";
 import "../../assets/icons/calendar-icon.svg";
@@ -49,9 +50,32 @@ class Form extends React.Component {
                   />
                 </div>
               </div>
-              <button className="request__form--submitButton">Enviar</button>
+              {/*<button className="request__form--submitButton">Enviar</button>
             </form>
             <Button />
+    </div> */}
+              <div className="right-inputs">
+                <Input
+                  classLabel="date"
+                  classInput="request__date"
+                  label="Hasta"
+                  placeholder="16/09/2019"
+                />
+                <Input
+                  classInput="request__text"
+                  type="text"
+                  placeholder="Asunto"
+                />
+              </div>
+              <Link to="/gestor/confirmation">
+                <Button className="request__form--submitButton" name="Enviar" />
+              </Link>
+            </form>
+            <Button
+              className="request__form--submitButton"
+              name="Añadir otra petición"
+            />
+            {/* quitar este boton innecesario??? */}
           </div>
         </main>
       </React.Fragment>

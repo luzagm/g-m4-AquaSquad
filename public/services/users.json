@@ -1,8 +1,50 @@
-{
-  "name": "Chema",
-  "email": "josemaria.delanieta@accenture.com",
-  "chapter_id": 1,
-  "chapter_name": "Front",
-  "is_leader": false,
-  "time_off": 20
-}
+[
+  {
+    "name": "Chema",
+    "email": "josemaria.delanieta@accenture.com",
+    "chapter_id": 1,
+    "chapter_name": "Front",
+    "is_leader": false,
+    "time_off": 20
+  },
+  {
+    "name": "Laura",
+    "email": "josemaria.delanieta@accenture.com",
+    "chapter_id": 2,
+    "chapter_name": "Front",
+    "is_leader": false,
+    "time_off": 20
+  },
+  {
+    "name": "Luz",
+    "email": "josemaria.delanieta@accenture.com",
+    "chapter_id": 3,
+    "chapter_name": "Front",
+    "is_leader": false,
+    "time_off": 20
+  },
+  {
+    "name": "Isa",
+    "email": "josemaria.delanieta@accenture.com",
+    "chapter_id": 4,
+    "chapter_name": "Mobile",
+    "is_leader": false,
+    "time_off": 20
+  },
+  {
+    "name": "Sara",
+    "email": "josemaria.delanieta@accenture.com",
+    "chapter_id": 5,
+    "chapter_name": "Back",
+    "is_leader": false,
+    "time_off": 20
+  },
+  {
+    "name": "Ana",
+    "email": "josemaria.delanieta@accenture.com",
+    "chapter_id": 6,
+    "chapter_name": "DevOps",
+    "is_leader": false,
+    "time_off": 20
+  }
+]

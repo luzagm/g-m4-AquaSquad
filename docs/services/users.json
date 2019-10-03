@@ -1,8 +1,56 @@
-{
-  "name": "Chema",
-  "email": "josemaria.delanieta@accenture.com",
-  "chapter_id": 1,
-  "chapter_name": "Front",
-  "is_leader": false,
-  "time_off": 20
-}
+[
+  {
+    "name": "Chema",
+    "email": "josemaria.delanieta@accenture.com",
+    "chapter_id": 1,
+    "chapter_name": "Front",
+    "is_leader": false,
+    "time_off": 20,
+    "project": "Wadus"
+  },
+  {
+    "name": "Laura",
+    "email": "josemaria.delanieta@accenture.com",
+    "chapter_id": 2,
+    "chapter_name": "Front",
+    "is_leader": false,
+    "time_off": 20,
+    "project": "Wadus"
+  },
+  {
+    "name": "Luz",
+    "email": "josemaria.delanieta@accenture.com",
+    "chapter_id": 3,
+    "chapter_name": "Front",
+    "is_leader": false,
+    "time_off": 20,
+    "project": "Liquid Squad"
+  },
+  {
+    "name": "Isa",
+    "email": "josemaria.delanieta@accenture.com",
+    "chapter_id": 4,
+    "chapter_name": "Front",
+    "is_leader": false,
+    "time_off": 20,
+    "project": "Lorem Ipsum"
+  },
+  {
+    "name": "Sara",
+    "email": "josemaria.delanieta@accenture.com",
+    "chapter_id": 5,
+    "chapter_name": "Front",
+    "is_leader": false,
+    "time_off": 20,
+    "project": "Et siaame lorem ipsum"
+  },
+  {
+    "name": "Ana",
+    "email": "josemaria.delanieta@accenture.com",
+    "chapter_id": 6,
+    "chapter_name": "Front",
+    "is_leader": false,
+    "time_off": 20,
+    "project": "Liquid Squad"
+  }
+]

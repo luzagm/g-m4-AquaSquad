@@ -1,4 +1,5 @@
 import React from "react";
+
 import "../../stylesheets/components/ListUserStatus.scss";
 
 const ListUserStatus = () => {
