@@ -7,9 +7,11 @@ import UserListGestor from "./gestor/UserListGestor";
 import GestorList from "./gestor/GestorList";
 import GestorDetails from "./gestor/GestorDetail";
 import Confirmation from "./Confirmation";
+import ConfirmationGestor from "./ConfirmationGestor";
 import Form from "./user/Form";
 import "../stylesheets/App.scss";
 import "../stylesheets/core/variables.scss";
+import Reject from "./Reject";
 
 const dataurl = "./services/users.json";
 const holidaysurl = "./services/holidays.json";
@@ -105,7 +107,13 @@ class App extends React.Component {
               }}
             />
             <Route exact path="/gestor/details" component={GestorDetails} />
-            <Route path="/gestor/confirmation" component={Confirmation} />
+            <Route exact path="/gestor/confirmation" component={Confirmation} />
+            <Route
+              exact
+              path="/gestor/confirmation/give"
+              component={ConfirmationGestor}
+            />
+            <Route exact path="/reject" component={Reject} />
           </Switch>
         </main>
       </div>
