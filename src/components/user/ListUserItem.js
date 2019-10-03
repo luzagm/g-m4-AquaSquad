@@ -22,7 +22,7 @@ const renderDate = date => {
 
 const ListUserItem = props => {
   const { data, userHolidays } = props;
-  console.log(data);
+  console.log(userHolidays);
   const holidaysStatus = userHolidays.status;
   const date = userHolidays.date;
 

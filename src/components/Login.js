@@ -15,7 +15,7 @@ const Login = () => {
           <Link to="/user">
             <Button name="Acceder" />
           </Link>
-          <Link to="/user/gestor">
+          <Link to="/gestor">
             <Button name="Acceder Gestor" />
           </Link>
         </form>
