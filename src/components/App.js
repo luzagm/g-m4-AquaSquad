@@ -8,6 +8,7 @@ import GestorList from "./gestor/GestorList";
 import GestorDetails from "./gestor/GestorDetail";
 import Confirmation from "./Confirmation";
 import ConfirmationGestor from "./ConfirmationGestor";
+import NotFoundPage from "./NoFound";
 import Form from "./user/Form";
 import "../stylesheets/App.scss";
 import "../stylesheets/core/variables.scss";
@@ -114,6 +115,7 @@ class App extends React.Component {
               component={ConfirmationGestor}
             />
             <Route exact path="/reject" component={Reject} />
+            <Route component={NotFoundPage} />
           </Switch>
         </main>
       </div>
