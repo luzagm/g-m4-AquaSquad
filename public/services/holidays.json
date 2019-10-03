@@ -3,7 +3,7 @@
   "holidays": [
     {
       "date": "2019-09-16",
-      "employee_id": 1,
+      "employee_id": 6,
       "earlier_fiscal_year": false,
       "overtime": false,
       "status": "pending"
@@ -24,7 +24,7 @@
     },
     {
       "date": "2019-09-20",
-      "employee_id": 2,
+      "employee_id": 4,
       "earlier_fiscal_year": false,
       "overtime": false,
       "status": "rejected"
@@ -39,6 +39,27 @@
     {
       "date": "2019-10-03",
       "employee_id": 2,
+      "earlier_fiscal_year": false,
+      "overtime": false,
+      "status": "company-holidays"
+    },
+    {
+      "date": "2019-09-20",
+      "employee_id": 6,
+      "earlier_fiscal_year": false,
+      "overtime": false,
+      "status": "rejected"
+    },
+    {
+      "date": "2019-09-26",
+      "employee_id": 3,
+      "earlier_fiscal_year": false,
+      "overtime": false,
+      "status": "company-holidays"
+    },
+    {
+      "date": "2019-10-03",
+      "employee_id": 5,
       "earlier_fiscal_year": false,
       "overtime": false,
       "status": "company-holidays"

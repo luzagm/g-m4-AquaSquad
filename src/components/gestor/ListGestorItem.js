@@ -4,11 +4,21 @@ import "../../stylesheets/components/ListGestorItem.scss";
 
 const ListGestorItem = props => {
   const { user, holidays } = props;
+  // console.log(user);
+  console.log(props);
 
-  const holidayDate = holidays.date.replace(
-    /^(\d{4})-(\d{2})-(\d{2})$/g,
-    "$3/$2/$1"
-  );
+  // const userName = user.find(user => {
+  //   return user.employee_id === holidays.employee_id;
+  // });
+
+  const holidayDate = holidays.date;
+
+  // const formatDate = holi
+  // replace(
+  //   /^(\d{4})-(\d{2})-(\d{2})$/g,
+  //   "$3/$2/$1"
+  // );
+  console.log(holidayDate);
 
   const holidaysStatus = holidays.status;
 
