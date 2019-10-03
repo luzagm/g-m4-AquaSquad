@@ -38,10 +38,6 @@ const GestorList = props => {
     getProject,
     holidaysData
   } = props;
-<<<<<<< HEAD
-  console.log(props);
-=======
->>>>>>> 5991c9d3955d96f2b9fa40c5194b882ddb78600b
 
   return (
     <div className="gestormain">
