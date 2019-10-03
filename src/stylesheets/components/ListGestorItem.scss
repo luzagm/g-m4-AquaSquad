@@ -3,6 +3,7 @@
 p {
   margin: 0;
 }
+
 .mainwrap__gestoritem {
   margin: 0;
   padding: 20px 15px;
@@ -19,4 +20,16 @@ p {
   &--status {
     display: flex;
   }
+}
+.btn__green {
+  width: 20px;
+  height: 20px;
+  background-color: #03800b;
+  border-radius: 50px;
+}
+.btn__red {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50px;
 }

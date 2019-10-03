@@ -4,10 +4,6 @@ import { Link } from "react-router-dom";
 import "../stylesheets/App.scss";
 import "../stylesheets/components/Confirmation.scss";
 
-// es un pop up, por defecto necesita un display none, y aparece al clickar/solicitar
-// dependiendo de la respuesta, se acepta o no la confirmación
-// fechas cambian según los datos del estado actualizado(pasar por props)
-
 const Confirmation = () => {
   return (
     <div className="confirmation__wrap">

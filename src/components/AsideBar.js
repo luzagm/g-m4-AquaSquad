@@ -1,8 +1,9 @@
 import React from "react";
-//import Button from "./Button";
+import Button from "./Button";
 import doll from "../assets/images/doll.png";
 import "../stylesheets/components/AsideBar.scss";
 import "../stylesheets/components/Button.scss";
+import { Link } from "react-router-dom";
 
 const AsideBar = props => {
   return (
@@ -16,6 +17,8 @@ const AsideBar = props => {
       </div>
       <div className="asidebar__time">4.4</div>
       <h5>Hours</h5>
+      <Link to="/Gestor">{props.btn}</Link>
+      <Link to="/user/gestor">{props.btnChange}</Link>
     </div>
   );
 };

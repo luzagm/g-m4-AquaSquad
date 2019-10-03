@@ -1,31 +1,32 @@
 import React from "react";
-import Header from "../Header";
 import AsideBar from "../AsideBar";
 import ListGestorItem from "./ListGestorItem";
 import ListGestorStatus from "./ListGestorStatus";
 import Filters from "../Filters";
 import "../../stylesheets/components/Gestor.scss";
 import "../../stylesheets/App.scss";
-// import AsideBar from "../AsideBar";
+import Button from "../Button";
+// import { Link } from "react-router-dom";
 
 const renderList = (data, userName, project, holidaysData) => {
-  return (
-    data
-      .filter(user => {
-        return user.name.includes(userName);
-      })
-      // .filter(user => {
-      //   return user.chapter_name.includes(chapter);
-      // })
-      .filter(user => {
-        return user.project.includes(project);
-      })
-      .map((user, index) => {
-        return (
-          <ListGestorItem user={user} holidays={holidaysData} key={index} />
-        );
-      })
-  );
+  const holidaysDate = holidaysData.holidays;
+
+  return data
+    .filter(user => {
+      return user.name.includes(userName);
+    })
+    .filter(user => {
+      return user.project.includes(project);
+    })
+    .map((user, index) => {
+      return (
+        <ListGestorItem
+          user={user}
+          holidays={holidaysDate[index]}
+          key={index}
+        />
+      );
+    });
 };
 
 const GestorList = props => {
@@ -34,31 +35,30 @@ const GestorList = props => {
     data,
     userName,
     getUserName,
-    // chapter,
-    // getChapter,
     project,
     getProject,
     holidaysData
   } = props;
 
   return (
-    <div className="gestormain">
-      <AsideBar />
-      <div className="mainwrap col-9">
-        <div className="requestscontainer">
-          <h2 className="mainwrap__title">Solicitudes</h2>
-          <p className="reset-btn" onClick={action}>
-            Reset filters
-          </p>
+    <div className="gestormain col-12">
+      <div className="mainwrap__gestor row">
+        <AsideBar btnChange={<Button name="Cambiar a Solicitudes" />} />
+        <div className="mainwrap col-9">
+          <div className="requestscontainer">
+            <h2 className="mainwrap__title">Solicitudes</h2>
+            <p className="reset-btn" onClick={action}>
+              Reset filters
+            </p>
+          </div>
+          <Filters
+            data={data}
+            getUserName={getUserName}
+            getProject={getProject}
+          />
+          <ListGestorStatus />
+          <ul>{renderList(data, userName, project, holidaysData)}</ul>
         </div>
-        <Filters
-          data={data}
-          getUserName={getUserName}
-          // getChapter={getChapter}
-          getProject={getProject}
-        />
-        <ListGestorStatus />
-        <ul>{renderList(data, userName, project, holidaysData)}</ul>
       </div>
     </div>
   );
