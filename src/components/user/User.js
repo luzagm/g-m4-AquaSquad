@@ -23,7 +23,7 @@ const UserList = props => {
       <div className="mainwrap col-9">
         <h2 className="mainwrap__title">Solicitudes</h2>
         <ListUserStatus />
-        <ul>{renderList(holidays)}</ul>
+        {/* <ul>{renderList(holidays)}</ul> */}
       </div>
       <Link to="/user/form">
         <Button name="Añadir petición" />

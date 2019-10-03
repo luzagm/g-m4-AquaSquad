@@ -1,15 +1,36 @@
 @import "../core/variables";
 
-.confirmation__wrap{
+.confirmation__wrap {
     width: 700px;
-    padding:31px 35px 104px 30px;
-    border: 1px solid blue; // borde temporal
+    height: 259px;
+    padding: 31px 35px 104px 30px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
 
 }
-.confirmation__date{
+
+.confirmation__title {
+    width: 283px;
+    height: 29px;
+    font-family: Graphik;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #3d4750;
+}
+
+.mainwrapmain {
+    margin: 20px 200px;
+    height: 100vh;
+}
+
+.confirmation__date {
     font-weight: bold
 }
-.confirmation__text{
-    padding-top:29px;
+
+.confirmation__text {
+    padding-top: 29px;
     line-height: 22px;
 }
