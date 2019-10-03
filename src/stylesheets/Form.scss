@@ -2,7 +2,7 @@
 
 .request__form {
   width: 700px;
-  height: 360px;
+  height: 389px;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
   background-color: #ffffff;
   margin: 22px 250px 0 490px;
@@ -24,8 +24,8 @@
   }
 
   &--label {
-    display: block;
-    width: 37px;
+    // display: block;
+    // width: 37px;
     // height: 14px;
     font-family: Graphik;
     font-size: 12px;
@@ -117,7 +117,7 @@
 
 .request__text {
   display: flex;
-  margin: 20px auto 20px;
+  margin: 0 0 20px;
   width: 310px;
   height: 112px;
   border: solid 1px #ebeced;

@@ -2,7 +2,16 @@ import React from "react";
 import "../stylesheets/components/Filters.scss";
 
 const renderName = data => {
-  return data.map((user, index) => {
+  const listOrdered = data.sort(function(a, b) {
+    if (a.name > b.name) {
+      return 1;
+    }
+    if (a.name < b.name) {
+      return -1;
+    }
+    return 0;
+  });
+  return listOrdered.map((user, index) => {
     return (
       <option value={user.name} key={index}>
         {user.name}
@@ -51,6 +60,8 @@ const Filters = props => {
         onChange={getChapter}
       >
         <option value="">Chapter</option>
+      <select className="gestor__wrap--selectfilter" name="chapter">
+        <option>Chapter</option>
         {renderChapter(data)}
       </select> */}
 

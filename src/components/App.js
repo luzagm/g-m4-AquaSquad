@@ -91,7 +91,7 @@ class App extends React.Component {
   //nos chiva en  consola los errores, y luego ya añadiréis control de errores en condiciones
 
   render() {
-    if (this.state === null) {
+    if (this.state.users === [] || this.state.holidays === []) {
       return <p>Loading</p>;
     }
 
@@ -107,8 +107,19 @@ class App extends React.Component {
               render={() => {
                 return <UserList holidaysData={this.state.holidays} />;
               }} */}
+            <Route
+              exact
+              path="/user"
+              render={() => {
+                return (
+                  <UserList
+                    holidays={this.state.holidays}
+                    data={this.state.users}
+                  />
+                );
+              }}
             />
-            <Route exact path="/user/form" component={Form} />
+            <Route path="/user/form" component={Form} />
             <Route exact path="/user/confirmation" component={Confirmation} />
             <Route
               exact

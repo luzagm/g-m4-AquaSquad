@@ -1,8 +1,11 @@
 @import "../core/variables";
 
+p {
+  margin: 0;
+}
 .mainwrap__gestoritem {
   margin: 0;
-  padding: 15px 0 15px 15px;
+  padding: 20px 15px;
   font-size: 12px;
   color: $colorTerciary;
   border-bottom: solid 1px #ebeced;

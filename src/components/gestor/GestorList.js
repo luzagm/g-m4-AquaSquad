@@ -1,10 +1,12 @@
 import React from "react";
+import Header from "../Header";
+import AsideBar from "../AsideBar";
 import ListGestorItem from "./ListGestorItem";
 import ListGestorStatus from "./ListGestorStatus";
 import Filters from "../Filters";
 import "../../stylesheets/components/Gestor.scss";
 import "../../stylesheets/App.scss";
-import AsideBar from "../AsideBar";
+// import AsideBar from "../AsideBar";
 
 const renderList = (data, userName, project, holidaysData) => {
   return (

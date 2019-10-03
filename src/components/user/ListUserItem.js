@@ -18,14 +18,15 @@ const renderStatus = holidaysStatus => {
 
 const ListUserItem = props => {
   const { userHolidays } = props;
-  const holidaysStatus = userHolidays.status;
+  // const holidaysStatus = userHolidays.status;
+  console.log(props.data.holidays);
 
   return (
     <div className="mainwrap__useritem row col-12">
       <p className="col-4">22/01/2019 - 31/01/2019</p>
       <div className="mainwrap__useritem--status col-5">
-        <Circle color={userHolidays.status} />
-        <p>{renderStatus(holidaysStatus)}</p>
+        {/* <Circle color={userHolidays.status} /> */}
+        {/* <p>{renderStatus(holidaysStatus)}</p> */}
       </div>
       <p className="col-3">Wadus</p>
     </div>
