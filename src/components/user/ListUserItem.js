@@ -19,10 +19,10 @@ const renderStatus = holidaysStatus => {
 const renderDate = date => {
   return date.replace(/^(\d{4})-(\d{2})-(\d{2})$/g, "$3/$2/$1");
 };
-// Hay que agrupar fechas según el estado de la petición
 
 const ListUserItem = props => {
-  const { userHolidays } = props;
+  const { data, userHolidays } = props;
+  console.log(data);
   const holidaysStatus = userHolidays.status;
   const date = userHolidays.date;
 
@@ -33,7 +33,7 @@ const ListUserItem = props => {
         <Circle color={userHolidays.status} />
         <p>{renderStatus(holidaysStatus)}</p>
       </div>
-      <p className="col-3">{userHolidays.project}</p>
+      <p className="col-3">{data.project}</p>
     </div>
   );
 };

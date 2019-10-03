@@ -3,9 +3,6 @@ import Circle from "../Circle";
 import "../../stylesheets/components/ListGestorItem.scss";
 
 const ListGestorItem = props => {
-  // const { userHolidays, project } = props;
-  // const holidaysStatus = userHolidays.status;
-
   const { user, holidays } = props;
 
   const holidayDate = holidays.date.replace(

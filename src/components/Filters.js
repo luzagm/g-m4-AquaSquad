@@ -20,16 +20,6 @@ const renderName = data => {
   });
 };
 
-// const renderChapter = data => {
-//   return data.map((user, index) => {
-//     return (
-//       <option value={user.chapter_name} key={index}>
-//         {user.chapter_name}
-//       </option>
-//     );
-//   });
-// };
-
 const renderProject = data => {
   return data.map((user, index) => {
     return (
@@ -53,15 +43,6 @@ const Filters = props => {
         <option value="">Usuario</option>
         {renderName(data)}
       </select>
-
-      {/* <select
-        className="gestor__wrap--selectfilter"
-        name="chapter"
-        onChange={getChapter}
-      >
-        <option value="">Chapter</option>
-        {renderChapter(data)}
-      </select> */}
 
       <select
         className="gestor__wrap--selectfilter"

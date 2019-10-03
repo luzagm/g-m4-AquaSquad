@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../Header";
 import AsideBar from "../AsideBar";
 import ListGestorItem from "./ListGestorItem";
 import ListGestorStatus from "./ListGestorStatus";
@@ -33,8 +32,6 @@ const GestorList = props => {
     data,
     userName,
     getUserName,
-    // chapter,
-    // getChapter,
     project,
     getProject,
     holidaysData
@@ -49,7 +46,6 @@ const GestorList = props => {
           <Filters
             data={data}
             getUserName={getUserName}
-            // getChapter={getChapter}
             getProject={getProject}
           />
           <ListGestorStatus />
