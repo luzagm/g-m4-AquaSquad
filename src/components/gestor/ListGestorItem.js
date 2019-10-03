@@ -1,5 +1,6 @@
 import React from "react";
 import Circle from "../Circle";
+import { Link } from "react-router-dom";
 import "../../stylesheets/components/ListGestorItem.scss";
 
 const ListGestorItem = props => {
@@ -13,7 +14,12 @@ const ListGestorItem = props => {
         {/*  <p>{user.chapter_id}</p>  Usaremos este ID para saber qué vacaciones pendiente tiene este usuario*/}
       </div>
       <p className="col-3">Wadus</p>
-      <div className="btn__green">v</div>
+      <Link to="gestor/confirmation/give">
+        <button className="btn__green" type="radio" />
+      </Link>
+      <Link to="/reject">
+        <button className="btn__red" type="radio" />
+      </Link>
     </div>
   );
 };

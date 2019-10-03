@@ -18,13 +18,12 @@ p {
 .btn__green {
   width: 20px;
   height: 20px;
-  background-image: url("../../images/c-00-ef-7-fa-4-aebdae-65-e-82-b-6-d-5-df-5-d-2147@3x.png");
-
-  // background-color: #03800b;
-  // margin: 5px;
+  background-color: #03800b;
+  border-radius: 50px;
 }
-// .boton:hover {
-//   opacity: 0.5;
-//   -moz-opacity: 0.5;
-//   filter: alpha (opacity=50);
-// }
+.btn__red {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50px;
+}
