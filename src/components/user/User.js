@@ -26,7 +26,7 @@ const UserList = props => {
         <ul>{renderList(data, holidaysData)}</ul>
       </div>
       <Link to="/user/form">
-        <Button name="Añadir petición" />
+        <Button name="Nueva petición" />
       </Link>
     </div>
   );

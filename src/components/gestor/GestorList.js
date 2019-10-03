@@ -5,6 +5,8 @@ import ListGestorStatus from "./ListGestorStatus";
 import Filters from "../Filters";
 import "../../stylesheets/components/Gestor.scss";
 import "../../stylesheets/App.scss";
+import Button from "../Button";
+// import { Link } from "react-router-dom";
 
 const renderList = (data, userName, project, holidaysData) => {
   const holidaysDate = holidaysData.holidays;
@@ -40,7 +42,7 @@ const GestorList = props => {
   return (
     <div className="gestormain col-12">
       <div className="mainwrap__gestor row">
-        <AsideBar />
+        <AsideBar btnChange={<Button name="Cambiar a Solicitudes" />} />
         <div className="mainwrap col-9">
           <h2 className="mainwrap__title">Solicitudes</h2>
           <Filters

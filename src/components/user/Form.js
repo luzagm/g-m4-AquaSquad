@@ -2,6 +2,8 @@ import React from "react";
 import Input from "./Inputs";
 import { Link } from "react-router-dom";
 import Button from "../Button";
+import "../../stylesheets/Form.scss";
+import "../../assets/icons/calendar-icon.svg";
 
 class Form extends React.Component {
   render() {
@@ -46,11 +48,12 @@ class Form extends React.Component {
             <Link to="/gestor/confirmation">
               <Button className="request__form--submitButton" name="Enviar" />
             </Link>
-            <Button
-              className="request__form--submitButton"
-              name="Añadir otra petición"
-            />
           </form>
+          <Button
+            className="request__form--submitButton"
+            name="Añadir otra petición"
+          />
+          {/* quitar este boton innecesario??? */}
         </main>
       </React.Fragment>
     );
