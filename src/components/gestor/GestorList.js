@@ -11,7 +11,11 @@ import { Link } from "react-router-dom";
 
 const renderList = data => {
   return data.map((user, index) => {
-    return <ListGestorItem user={user} key={index} />;
+    return (
+      <Link to="/gestor/details">
+        <ListGestorItem user={user} key={index} />
+      </Link>
+    );
   });
 };
 
