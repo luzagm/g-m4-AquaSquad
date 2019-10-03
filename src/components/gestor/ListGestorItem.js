@@ -1,5 +1,6 @@
 import React from "react";
 import Circle from "../Circle";
+import { Link } from "react-router-dom";
 import "../../stylesheets/components/ListGestorItem.scss";
 
 const ListGestorItem = props => {
@@ -20,6 +21,12 @@ const ListGestorItem = props => {
         <p>{user.name}</p>
       </div>
       <p className="col-3">{user.project}</p>
+      <Link to="gestor/confirmation/give">
+        <button className="btn__green" type="radio" />
+      </Link>
+      <Link to="/reject">
+        <button className="btn__red" type="radio" />
+      </Link>
     </div>
   );
 };
