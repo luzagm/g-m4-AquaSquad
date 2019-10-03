@@ -19,7 +19,7 @@ const ConfirmationGestor = () => {
         aprobada</strong> correctamente.
       </p>
       <Link to="/user/gestor">
-        <Button name="Volver a solicitudes" />;
+        <Button name="Volver a solicitudes" />
       </Link>
     </div>
   );

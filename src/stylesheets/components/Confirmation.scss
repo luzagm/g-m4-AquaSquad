@@ -1,15 +1,14 @@
-@import "../core/variables";
+@import '../core/variables';
 
-.confirmation__wrap{
-    width: 700px;
-    padding:31px 35px 104px 30px;
-    border: 1px solid blue; // borde temporal
-
+.confirmation__wrap {
+  width: 700px;
+  padding: 31px 35px 104px 30px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
 }
-.confirmation__date{
-    font-weight: bold
+.confirmation__date {
+  font-weight: bold;
 }
-.confirmation__text{
-    padding-top:29px;
-    line-height: 22px;
+.confirmation__text {
+  padding-top: 29px;
+  line-height: 22px;
 }
