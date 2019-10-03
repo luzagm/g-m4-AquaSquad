@@ -1,11 +1,13 @@
-import React from 'react';
-import Header from '../Header'
+import React from "react";
+import Header from "../Header";
 import AsideBar from "../AsideBar";
 import ListGestorItem from "./ListGestorItem";
 import ListGestorStatus from "./ListGestorStatus";
 import Filters from "../Filters";
 import "../../stylesheets/components/Gestor.scss";
 import "../../stylesheets/App.scss";
+import Button from "../Button";
+import { Link } from "react-router-dom";
 
 const renderList = data => {
   return data.map((user, index) => {
@@ -13,13 +15,13 @@ const renderList = data => {
   });
 };
 
-const GestorList = (props) => {
+const GestorList = props => {
   const { data } = props;
   return (
     <div className="gestormain">
       <div className="mainwrap__gestor row">
-        <AsideBar />
-        <div className='col-9'>
+        <AsideBar btnChange={<Button name="Cambiar a Solicitudes" />} />
+        <div className="col-9">
           <h2 className="mainwrap__title">Gestión de solicitudes</h2>
           <Filters data={data} />
           <ListGestorStatus />
@@ -27,7 +29,7 @@ const GestorList = (props) => {
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default GestorList;
