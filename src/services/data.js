@@ -1,7 +1,7 @@
-const URL = "https://api-adalab.dev.liquid.delivery/docs/api-docs.json";
+const URL = "https://api-adalab.dev.liquid.delivery/api/login";
 
 const data = () => {
-  console.log(data);
+  // console.log(data);
   return fetch(URL)
     .then(response => response.json())
     .then(data => data);

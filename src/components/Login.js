@@ -9,9 +9,16 @@ import data from "../services/data";
 class Login extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {};
+    this.loginData = this.loginData.bind(this);
+    this.login = this.login.bind(this);
   }
   componentDidMount() {
     this.login();
+  }
+
+  loginData() {
+    console.log("hola");
   }
 
   login() {
@@ -31,7 +38,9 @@ class Login extends React.Component {
           <form>
             <Input placeholder="Usuario" />
             <Input placeholder="Contraseña" />
-            <button className="btnPrueba">Acceder</button>
+            <button className="btnPrueba" type="submit">
+              Acceder
+            </button>
             {/* <Button /> */}
           </form>
         </div>
