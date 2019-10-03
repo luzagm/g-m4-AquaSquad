@@ -28,6 +28,7 @@ class App extends React.Component {
     this.getUserName = this.getUserName.bind(this);
     this.getChapter = this.getChapter.bind(this);
     this.getProject = this.getProject.bind(this);
+    this.clearFilters = this.clearFilters.bind(this);
   }
 
   componentDidMount() {
@@ -49,6 +50,15 @@ class App extends React.Component {
       .then(data => {
         this.setState({ holidays: data });
       });
+  }
+
+  clearFilters() {
+    this.forceUpdate();
+    this.setState({
+      userName: "",
+      chapter: "",
+      project: ""
+    });
   }
 
   getProject(event) {
@@ -108,6 +118,7 @@ class App extends React.Component {
                   <GestorList
                     data={this.state.users}
                     holidaysData={this.state.holidays}
+                    action={this.clearFilters}
                     getUserName={this.getUserName}
                     getChapter={this.getChapter}
                     getProject={this.getProject}

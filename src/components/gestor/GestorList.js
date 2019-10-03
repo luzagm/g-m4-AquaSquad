@@ -25,6 +25,7 @@ const renderList = (data, userName, project, chapter, holidaysData) => {
 
 const GestorList = props => {
   const {
+    action,
     data,
     userName,
     getUserName,
@@ -34,13 +35,18 @@ const GestorList = props => {
     getProject,
     holidaysData
   } = props;
-  console.log(chapter);
+  console.log(props);
 
   return (
     <div className="gestormain">
       <AsideBar />
       <div className="mainwrap col-9">
-        <h2 className="mainwrap__title">Solicitudes</h2>
+        <div className="requestscontainer">
+          <h2 className="mainwrap__title">Solicitudes</h2>
+          <p className="reset-btn" onClick={action}>
+            Reset filters
+          </p>
+        </div>
         <Filters
           data={data}
           getUserName={getUserName}
