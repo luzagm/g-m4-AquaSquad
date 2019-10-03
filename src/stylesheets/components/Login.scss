@@ -1,3 +1,5 @@
+@import '../core/fonts.scss';
+
 .login__container {
   margin: 157px auto;
   width: 437.7px;
@@ -11,7 +13,7 @@
 .login__title {
   margin: 27.6px auto 25px;
   height: 46px;
-  font-family: Graphik;
+  font-family: 'Graphik Web';
   font-size: 30px;
   font-weight: bold;
   font-style: normal;
@@ -35,7 +37,7 @@
 
   &::placeholder {
     padding-left: 17px;
-    font-family: Graphik;
+    font-family: 'Graphik Web';
     font-size: 12px;
     font-weight: 500;
     font-style: normal;
