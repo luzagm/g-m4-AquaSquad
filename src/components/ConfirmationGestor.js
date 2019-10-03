@@ -13,7 +13,7 @@ const ConfirmationGestor = () => {
     <div className="confirmation__wrap">
       <h2 className="confirmation__title">Solicitud de vacaciones</h2>
       <p className="confirmation__text">
-        La solicitud de tus vacaciones:{" "}
+        La solicitud de las vacaciones:{" "}
         <span className="confirmation__date">13/09/2019</span> hasta{" "}
         <span className="confirmation__date">16/09/2019</span> de Chema ha sido
         aprobada correctamente.
