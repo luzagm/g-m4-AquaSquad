@@ -9,7 +9,6 @@ import "../../stylesheets/App.scss";
 
 const renderList = (data, userName, project, holidaysData) => {
   const holidaysDate = holidaysData.holidays;
-  console.log(holidaysDate);
 
   return data
     .filter(user => {
