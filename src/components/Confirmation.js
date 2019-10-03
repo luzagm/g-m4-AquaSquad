@@ -20,7 +20,7 @@ const Confirmation = () => {
         recibes este mail ponte en contacto con tu jefe de proyecto.
       </p>
       <Link to="/user">
-        <Button name="Volver a solicitudes" />;
+        <Button name="Volver a solicitudes" />
       </Link>
     </div>
   );
