@@ -37,7 +37,8 @@ const ListGestorItem = props => {
   }
 
   const listHolidaysTotal = holidaysData.map(holiday => {
-    return <p id={holiday.employee_id}>{holiday.date}</p>
+    const date = holiday.date.replace(/^(\d{4})-(\d{2})-(\d{2})$/g, "$3/$2/$1")
+    return <p id={holiday.employee_id}>{date}</p>
   })
 
   return (
