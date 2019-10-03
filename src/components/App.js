@@ -20,13 +20,13 @@ class App extends React.Component {
       users: [],
       holidays: [],
       userName: "",
-      chapter: "",
+      // chapter: "",
       project: ""
     };
     this.getUserData = this.getUserData.bind(this);
     this.getHolidaysData = this.getHolidaysData.bind(this);
     this.getUserName = this.getUserName.bind(this);
-    this.getChapter = this.getChapter.bind(this);
+    // this.getChapter = this.getChapter.bind(this);
     this.getProject = this.getProject.bind(this);
   }
 
@@ -56,11 +56,11 @@ class App extends React.Component {
     this.setState({ chapter: selectProject });
   }
 
-  getChapter(event) {
-    const selectChapter = event.currentTarget.value;
-    console.log(selectChapter);
-    this.setState({ chapter: selectChapter });
-  }
+  // getChapter(event) {
+  //   const selectChapter = event.currentTarget.value;
+  //   console.log(selectChapter);
+  //   this.setState({ chapter: selectChapter });
+  // }
 
   getUserName(event) {
     const selectUserName = event.currentTarget.value;
@@ -109,10 +109,10 @@ class App extends React.Component {
                     data={this.state.users}
                     holidaysData={this.state.holidays}
                     getUserName={this.getUserName}
-                    getChapter={this.getChapter}
+                    // getChapter={this.getChapter}
                     getProject={this.getProject}
                     userName={this.state.userName}
-                    chapter={this.state.chapter}
+                    // chapter={this.state.chapter}
                     project={this.state.project}
                   />
                 );

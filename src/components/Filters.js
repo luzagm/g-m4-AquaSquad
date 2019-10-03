@@ -11,15 +11,15 @@ const renderName = data => {
   });
 };
 
-const renderChapter = data => {
-  return data.map((user, index) => {
-    return (
-      <option value={user.chapter_name} key={index}>
-        {user.chapter_name}
-      </option>
-    );
-  });
-};
+// const renderChapter = data => {
+//   return data.map((user, index) => {
+//     return (
+//       <option value={user.chapter_name} key={index}>
+//         {user.chapter_name}
+//       </option>
+//     );
+//   });
+// };
 
 const renderProject = data => {
   return data.map((user, index) => {
@@ -45,14 +45,14 @@ const Filters = props => {
         {renderName(data)}
       </select>
 
-      <select
+      {/* <select
         className="gestor__wrap--selectfilter"
         name="chapter"
         onChange={getChapter}
       >
         <option value="">Chapter</option>
         {renderChapter(data)}
-      </select>
+      </select> */}
 
       <select
         className="gestor__wrap--selectfilter"
