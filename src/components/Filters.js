@@ -45,6 +45,15 @@ const Filters = props => {
         {renderName(data)}
       </select>
 
+      {/* <select
+        className="gestor__wrap--selectfilter"
+        name="chapter"
+        onChange={getChapter}
+      >
+        <option value="">Chapter</option>
+        {renderChapter(data)}
+      </select> */}
+
       <select
         className="gestor__wrap--selectfilter"
         name="project"
