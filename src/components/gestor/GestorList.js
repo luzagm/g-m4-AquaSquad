@@ -38,6 +38,7 @@ const GestorList = props => {
     getProject,
     holidaysData
   } = props;
+  console.log(props)
 
   return (
     <div className="gestormain col-12">
