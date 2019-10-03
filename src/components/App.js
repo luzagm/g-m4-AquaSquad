@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Header from "./Header";
 import Login from "./Login";
 import UserList from "./user/User";
+import UserListGestor from "./gestor/UserListGestor";
 import GestorList from "./gestor/GestorList";
 import GestorDetails from "./gestor/GestorDetail";
 import Confirmation from "./Confirmation";
@@ -80,7 +81,18 @@ class App extends React.Component {
                   />
                 );
               }}
-              // component={UserList}
+            />
+            <Route
+              exact
+              path="/user/gestor"
+              render={() => {
+                return (
+                  <UserListGestor
+                    holidays={this.state.holidays}
+                    data={this.state.users}
+                  />
+                );
+              }}
             />
             <Route path="/user/form" component={Form} />
             <Route exact path="/user/confirmation" component={Confirmation} />

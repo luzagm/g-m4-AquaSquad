@@ -48,12 +48,12 @@ class Form extends React.Component {
             <Link to="/gestor/confirmation">
               <Button className="request__form--submitButton" name="Enviar" />
             </Link>
-            <Button
-              className="request__form--submitButton"
-              name="Añadir otra petición"
-            />
           </form>
-          <Button />
+          <Button
+            className="request__form--submitButton"
+            name="Añadir otra petición"
+          />
+          {/* quitar este boton innecesario??? */}
         </main>
       </React.Fragment>
     );
