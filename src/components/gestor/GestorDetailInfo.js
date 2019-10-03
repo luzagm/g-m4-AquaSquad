@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../../stylesheets/components/GestorDetailInfo.scss";
 
 const GestorDetailInfo = () => {
@@ -26,8 +27,12 @@ const GestorDetailInfo = () => {
         </div>
       </div>
       <div className="detail__button">
-        <button className="detail__button--approve">Aprobar</button>
-        <button className="detail__button--deny ">Rechazar</button>
+        <Link to="/gestor/confirmation/give">
+          <button className="detail__button--approve">Aprobar</button>
+        </Link>
+        <Link to="/reject">
+          <button className="detail__button--deny ">Rechazar</button>
+        </Link>
       </div>
     </div>
   );

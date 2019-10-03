@@ -7,29 +7,23 @@ import "../../stylesheets/App.scss";
 import Button from "../Button";
 import { Link } from "react-router-dom";
 
-const renderList = holidays => {
-  console.log(holidays);
-  return holidays.map((user, index) => {
-    return <ListUserItem userHolidays={user} key={index} />;
+
+const renderList = (data, holidaysData) => {
+  return holidaysData.map((user, index) => {
+    return <ListUserItem userHolidays={user} data={data[index]} key={index} />;
   });
 };
 
-const renderData = user => {
-  console.log(user);
-};
-
 const UserListGestor = props => {
-  const { holidays, data } = props;
-  console.log(props.data);
+  const { data, holidays } = props;
+  const holidaysData = holidays.holidays;
 
   return (
     <div className="mainwrapmain row">
-      <AsideBar btn={<Button name="Cambiar a Gestión" />} />
-      <div className="mainwrap col-9">
+      <AsideBar btn={<Button name="Cambiar a Gestión" />} />      <div className="mainwrap col-9">
         <h2 className="mainwrap__title">Solicitudes</h2>
         <ListUserStatus />
-        <ListUserItem data={data} holidays={holidays} />
-        <ul>{renderData(data)}</ul>
+        <ul>{renderList(data, holidaysData)}</ul>
       </div>
       <Link to="/user/form">
         <Button name="Nueva petición" />
@@ -39,3 +33,7 @@ const UserListGestor = props => {
 };
 
 export default UserListGestor;
+
+
+
+
