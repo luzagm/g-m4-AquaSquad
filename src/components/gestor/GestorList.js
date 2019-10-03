@@ -22,7 +22,7 @@ const renderList = (data, userName, project, holidaysData) => {
       return (
         <ListGestorItem
           user={user}
-          holidays={holidaysDate(holidaysDate.length - 1)}
+          holidays={holidaysDate[index]}
           key={index}
         />
       );

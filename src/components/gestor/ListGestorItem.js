@@ -5,7 +5,7 @@ import "../../stylesheets/components/ListGestorItem.scss";
 const ListGestorItem = props => {
   // const { userHolidays, project } = props;
   // const holidaysStatus = userHolidays.status;
-  debugger;
+
   const { user, holidays } = props;
 
   const holidayDate = holidays.date.replace(
@@ -13,6 +13,7 @@ const ListGestorItem = props => {
     "$3/$2/$1"
   );
 
+  console.log(holidayDate);
   // const holidayDate = props.holidays.date;
 
   // const renderDate = holidayDate => {
