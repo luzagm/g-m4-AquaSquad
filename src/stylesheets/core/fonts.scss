@@ -1,26 +1,37 @@
+//typography
+
 @font-face {
-  font-family: 'Graphik Web';
+  font-family: 'Graphik-Bold-Web';
   src: url('../../assets/fonts/Graphik-Bold-Web.eot');
   src: url('../../assets/fonts/Graphik-Bold-Web.eot?#iefix')
       format('embedded-opentype'),
     url('../../assets/fonts/Graphik-Bold-Web.woff2') format('woff2'),
     url('../../assets/fonts/Graphik-Bold-Web.woff') format('woff');
+}
 
-  /*src: url('../../assets/fonts/Graphik-Medium-Web.eot');
+@font-face {
+  font-family: 'Graphik-Medium-Web';
+  src: url('../../assets/fonts/Graphik-Medium-Web.eot');
   src: url('../../assets/fonts/Graphik-Medium-Web.eot?#iefix')
       format('embedded-opentype'),
     url('../../assets/fonts/Graphik-Medium-Web.woff2') format('woff2'),
     url('../../assets/fonts/Graphik-Medium-Web.woff') format('woff');
+}
 
+@font-face {
+  font-family: 'Graphik-Semibold-Web';
   src: url('../../assets/fonts/Graphik-Semibold-Web.eot');
   src: url('../../assets/fonts/Graphik-Semibold-Web.eot?#iefix')
       format('embedded-opentype'),
     url('../../assets/fonts/Graphik-Semibold-Web.woff2') format('woff2'),
     url('../../assets/fonts/Graphik-Semibold-Web.woff') format('woff');
+}
 
+@font-face {
+  font-family: 'Graphik-Regular-Web';
   src: url('../../assets/fonts/Graphik-Regular-Web.eot');
   src: url('../../assets/fonts/Graphik-Regular-Web.eot?#iefix')
       format('embedded-opentype'),
     url('../../assets/fonts/Graphik-Regular-Web.woff2') format('woff2'),
-    url('../../assets/fonts/Graphik-Regular-Web.woff') format('woff');*/
+    url('../../assets/fonts/Graphik-Regular-Web.woff') format('woff');
 }

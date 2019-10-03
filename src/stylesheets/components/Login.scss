@@ -13,7 +13,7 @@
 .login__title {
   margin: 27.6px auto 25px;
   height: 46px;
-  font-family: 'Graphik Web';
+  font-family: 'Graphik-Bold-Web';
   font-size: 30px;
   font-weight: bold;
   font-style: normal;
@@ -34,10 +34,11 @@
   height: 44.4px;
   background-color: #eeeeee;
   border: none;
+  font-family: 'Graphik-Medium-Web';
 
   &::placeholder {
     padding-left: 17px;
-    font-family: 'Graphik Web';
+    //font-family: 'Graphik-Medium-Web';
     font-size: 12px;
     font-weight: 500;
     font-style: normal;

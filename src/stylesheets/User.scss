@@ -1,3 +1,13 @@
-.mainwrap__title{
-    padding-left: 30px;
+@import './core/fonts.scss';
+
+.mainwrap__title {
+  padding-left: 30px;
+  font-family: 'Graphik-Bold-Web';
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3d4750;
 }
