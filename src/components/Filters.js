@@ -2,7 +2,16 @@ import React from "react";
 import "../stylesheets/components/Filters.scss";
 
 const renderName = data => {
-  return data.map((user, index) => {
+  const listOrdered = data.sort(function(a, b) {
+    if (a.name > b.name) {
+      return 1;
+    }
+    if (a.name < b.name) {
+      return -1;
+    }
+    return 0;
+  });
+  return listOrdered.map((user, index) => {
     return (
       <option value={user.name} key={index}>
         {user.name}
@@ -32,7 +41,7 @@ const renderProject = data => {
 };
 
 const Filters = props => {
-  const { data, getUserName, getChapter, getProject } = props;
+  const { data, getUserName, getProject } = props;
 
   return (
     <form className="gestor__wrap--filter">

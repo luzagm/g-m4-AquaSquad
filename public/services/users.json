@@ -3,6 +3,7 @@
     "name": "Chema",
     "email": "josemaria.delanieta@accenture.com",
     "chapter_id": 1,
+    "employee_id": 1,
     "chapter_name": "Front",
     "is_leader": false,
     "time_off": 20,
@@ -11,6 +12,7 @@
   {
     "name": "Laura",
     "email": "josemaria.delanieta@accenture.com",
+    "employee_id": 2,
     "chapter_id": 2,
     "chapter_name": "Front",
     "is_leader": false,

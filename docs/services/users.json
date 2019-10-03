@@ -5,8 +5,7 @@
     "chapter_id": 1,
     "chapter_name": "Front",
     "is_leader": false,
-    "time_off": 20,
-    "project": "Wadus"
+    "time_off": 20
   },
   {
     "name": "Laura",
@@ -14,8 +13,7 @@
     "chapter_id": 2,
     "chapter_name": "Front",
     "is_leader": false,
-    "time_off": 20,
-    "project": "Wadus"
+    "time_off": 20
   },
   {
     "name": "Luz",
@@ -23,34 +21,30 @@
     "chapter_id": 3,
     "chapter_name": "Front",
     "is_leader": false,
-    "time_off": 20,
-    "project": "Liquid Squad"
+    "time_off": 20
   },
   {
     "name": "Isa",
     "email": "josemaria.delanieta@accenture.com",
     "chapter_id": 4,
-    "chapter_name": "Front",
+    "chapter_name": "Mobile",
     "is_leader": false,
-    "time_off": 20,
-    "project": "Lorem Ipsum"
+    "time_off": 20
   },
   {
     "name": "Sara",
     "email": "josemaria.delanieta@accenture.com",
     "chapter_id": 5,
-    "chapter_name": "Front",
+    "chapter_name": "Back",
     "is_leader": false,
-    "time_off": 20,
-    "project": "Et siaame lorem ipsum"
+    "time_off": 20
   },
   {
     "name": "Ana",
     "email": "josemaria.delanieta@accenture.com",
     "chapter_id": 6,
-    "chapter_name": "Front",
+    "chapter_name": "DevOps",
     "is_leader": false,
-    "time_off": 20,
-    "project": "Liquid Squad"
+    "time_off": 20
   }
 ]

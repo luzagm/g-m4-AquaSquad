@@ -14,8 +14,8 @@ const renderList = data => {
 };
 
 const UserList = props => {
-  const { holidaysData } = props;
-  const holidays = holidaysData.holidays;
+  const { holidays } = props;
+  const holidaysData = holidays.holidays;
 
   return (
     <div className="mainwrapmain row">
@@ -23,7 +23,7 @@ const UserList = props => {
       <div className="mainwrap col-9">
         <h2 className="mainwrap__title">Solicitudes</h2>
         <ListUserStatus />
-        <ul>{renderList(holidays)}</ul>
+        <ul>{renderList(holidaysData)}</ul>
       </div>
       <Link to="/user/form">
         <Button name="Añadir petición" />

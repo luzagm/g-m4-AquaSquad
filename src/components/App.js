@@ -6,7 +6,7 @@ import UserList from "./user/User";
 import GestorList from "./gestor/GestorList";
 import GestorDetails from "./gestor/GestorDetail";
 import Confirmation from "./Confirmation";
-import Form from "./user/Form";
+// import Form from "./user/Form";
 import "../stylesheets/App.scss";
 import "../stylesheets/core/variables.scss";
 
@@ -28,9 +28,13 @@ class App extends React.Component {
     this.getUserName = this.getUserName.bind(this);
     // this.getChapter = this.getChapter.bind(this);
     this.getProject = this.getProject.bind(this);
+    // this.getData = this.getData.bind(this);
+    this.getUserData = this.getUserData.bind(this);
+    this.getHolidaysData = this.getHolidaysData.bind(this);
   }
 
   componentDidMount() {
+    // this.getData();
     this.getUserData();
     this.getHolidaysData();
   }
@@ -42,7 +46,6 @@ class App extends React.Component {
         this.setState({ users: data });
       });
   }
-
   getHolidaysData() {
     fetch(holidaysurl)
       .then(response => response.json())
@@ -50,6 +53,18 @@ class App extends React.Component {
         this.setState({ holidays: data });
       });
   }
+
+  // getData() {
+  //   Promise.all([fetch(dataurl), fetch(holidaysurl)])
+  //     .then(([res1, res2]) => Promise.all([res1.json(), res2.json()]))
+  //     .then(([usersData, holidaysData]) => {
+  //       this.setState({
+  //         users: usersData,
+  //         holidays: holidaysData
+  //       });
+  //     })
+  //     .catch(err => console.error(err));
+  // }
 
   getProject(event) {
     const selectProject = event.currentTarget.value;
@@ -69,19 +84,15 @@ class App extends React.Component {
 
   // fetch(nombredevariableconjson)
   // .then(response=>response.json())
-
   // Promise.resolve(nombredevariableconjson)
   //devuelve una promesa con el valor que le pases
-
   // .then(funcionQuePromesaLaRespuesta)
-
   //Promise.reject(mock de un error)
   //y así en lugar de entrar por el then, entrará por el catch
   // .catch((err) => console.error(err))
   //nos chiva en  consola los errores, y luego ya añadiréis control de errores en condiciones
-
   render() {
-    if (this.state === null) {
+    if (this.state === []) {
       return <p>Loading</p>;
     }
 
@@ -91,14 +102,14 @@ class App extends React.Component {
           <Header />
           <Switch>
             <Route exact path="/" component={Login} />
-            {/* <Route
+            <Route
               exact
               path="/user"
               render={() => {
-                return <UserList holidaysData={this.state.holidays} />;
-              }} */}
+                return <UserList holidays={this.state.holidays} />;
+              }}
             />
-            <Route exact path="/user/form" component={Form} />
+            {/* <Route exact path="/user/form" component={Form} /> */}
             <Route exact path="/user/confirmation" component={Confirmation} />
             <Route
               exact
@@ -126,5 +137,4 @@ class App extends React.Component {
     );
   }
 }
-
 export default App;
