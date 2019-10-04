@@ -7,7 +7,6 @@ import "../../stylesheets/App.scss";
 import Button from "../Button";
 import { Link } from "react-router-dom";
 
-
 const renderList = (data, holidaysData) => {
   return holidaysData.map((user, index) => {
     return <ListUserItem userHolidays={user} data={data[index]} key={index} />;
@@ -20,7 +19,12 @@ const UserListGestor = props => {
 
   return (
     <div className="mainwrapmain row">
-      <AsideBar btn={<Button name="Cambiar a Gestión" />} />      <div className="mainwrap col-9">
+      <AsideBar
+        time={props.time}
+        name={props.userLogin}
+        btn={<Button name="Cambiar a Gestión" />}
+      />{" "}
+      <div className="mainwrap col-9">
         <h2 className="mainwrap__title">Solicitudes</h2>
         <ListUserStatus />
         <ul>{renderList(data, holidaysData)}</ul>
@@ -33,7 +37,3 @@ const UserListGestor = props => {
 };
 
 export default UserListGestor;
-
-
-
-

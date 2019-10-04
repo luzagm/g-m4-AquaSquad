@@ -11,23 +11,25 @@ import Button from "../Button";
 const renderList = (data, userName, project, holidaysData, acceptHolidays) => {
   const holidaysDate = holidaysData.holidays;
 
-  return data
-    .filter(user => {
-      return user.name.includes(userName);
-    })
-    // .filter(user => {
-    //   return user.project.includes(project);
-    // })
-    .map((user, index) => {
-      return (
-        <ListGestorItem
-          user={user}
-          holidays={holidaysDate[index]}
-          key={index}
-          acceptHolidays={acceptHolidays}
-        />
-      );
-    });
+  return (
+    data
+      .filter(user => {
+        return user.name.includes(userName);
+      })
+      // .filter(user => {
+      //   return user.project.includes(project);
+      // })
+      .map((user, index) => {
+        return (
+          <ListGestorItem
+            user={user}
+            holidays={holidaysDate[index]}
+            key={index}
+            acceptHolidays={acceptHolidays}
+          />
+        );
+      })
+  );
 };
 
 const GestorList = props => {
@@ -45,7 +47,11 @@ const GestorList = props => {
   return (
     <div className="gestormain col-12">
       <div className="mainwrap__gestor row">
-        <AsideBar btnChange={<Button name="Cambiar a Solicitudes" />} />
+        <AsideBar
+          time={props.time}
+          name={props.userLogin}
+          btnChange={<Button name="Cambiar a Solicitudes" />}
+        />
         <div className="mainwrap col-9">
           <div className="requestscontainer">
             <h2 className="mainwrap__title">Solicitudes</h2>
@@ -59,7 +65,9 @@ const GestorList = props => {
             getProject={getProject}
           />
           <ListGestorStatus />
-          <ul>{renderList(data, userName, project, holidaysData, acceptHolidays)}</ul>
+          <ul>
+            {renderList(data, userName, project, holidaysData, acceptHolidays)}
+          </ul>
         </div>
       </div>
     </div>

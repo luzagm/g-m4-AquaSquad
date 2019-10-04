@@ -19,7 +19,7 @@ const UserList = props => {
 
   return (
     <div className="mainwrapmain row">
-      <AsideBar />
+      <AsideBar time={props.time} name={props.userLogin} />
       <div className="mainwrap col-9">
         <h2 className="mainwrap__title">Solicitudes</h2>
         <ListUserStatus />
