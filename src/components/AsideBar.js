@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "./Button";
 import doll from "../assets/images/doll.png";
 import "../stylesheets/components/AsideBar.scss";
 import "../stylesheets/components/Button.scss";

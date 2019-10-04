@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "../../stylesheets/components/ListGestorItem.scss";
 
 const ListGestorItem = props => {
-  const { user, holidays } = props;
+  const { user, holidays, acceptHolidays } = props;
 
   const holidayDate = holidays.date.replace(
     /^(\d{4})-(\d{2})-(\d{2})$/g,
@@ -12,6 +12,7 @@ const ListGestorItem = props => {
   );
 
   const holidaysStatus = holidays.status;
+  // const idUser =
 
   return (
     <div className="mainwrap__gestoritem row col-12">
@@ -21,7 +22,7 @@ const ListGestorItem = props => {
         <p>{user.name}</p>
       </div>
       <p className="col-3">{user.project}</p>
-      <Link to="gestor/confirmation/give">
+      <Link to="gestor/confirmation/give" onClick={acceptHolidays}>
         <button className="btn__green" type="radio" />
       </Link>
       <Link to="/reject">

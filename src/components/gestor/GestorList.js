@@ -8,7 +8,7 @@ import "../../stylesheets/App.scss";
 import Button from "../Button";
 // import { Link } from "react-router-dom";
 
-const renderList = (data, userName, project, holidaysData) => {
+const renderList = (data, userName, project, holidaysData, acceptHolidays) => {
   const holidaysDate = holidaysData.holidays;
 
   return data
@@ -24,6 +24,7 @@ const renderList = (data, userName, project, holidaysData) => {
           user={user}
           holidays={holidaysDate[index]}
           key={index}
+          acceptHolidays={acceptHolidays}
         />
       );
     });
@@ -37,7 +38,8 @@ const GestorList = props => {
     getUserName,
     project,
     getProject,
-    holidaysData
+    holidaysData,
+    acceptHolidays
   } = props;
 
   return (
@@ -57,7 +59,7 @@ const GestorList = props => {
             getProject={getProject}
           />
           <ListGestorStatus />
-          <ul>{renderList(data, userName, project, holidaysData)}</ul>
+          <ul>{renderList(data, userName, project, holidaysData, acceptHolidays)}</ul>
         </div>
       </div>
     </div>

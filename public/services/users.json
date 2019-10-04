@@ -11,11 +11,11 @@
   },
   {
     "name": "Laura",
-    "email": "josemaria.delanieta@accenture.com",
+    "email": "laurapareja@accenture.com",
     "employee_id": 2,
     "chapter_id": 2,
     "chapter_name": "Front",
-    "is_leader": false,
+    "is_leader": true,
     "time_off": 20,
     "project": "Liquid Squad"
   },

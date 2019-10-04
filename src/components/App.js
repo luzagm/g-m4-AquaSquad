@@ -23,7 +23,8 @@ class App extends React.Component {
       users: [],
       holidays: [],
       userName: "",
-      project: ""
+      project: "",
+
     };
     this.getUserData = this.getUserData.bind(this);
     this.getHolidaysData = this.getHolidaysData.bind(this);
@@ -73,6 +74,10 @@ class App extends React.Component {
     const selectUserName = event.currentTarget.value;
     this.setState({ userName: selectUserName });
   }
+  acceptHolidays(event) {
+    console.dir(event)
+    console.log('accepting holidays')
+  }
 
   render() {
     if (this.state === []) {
@@ -84,7 +89,9 @@ class App extends React.Component {
         <main className="main container-fluid">
           <Header />
           <Switch>
-            <Route exact path="/" component={Login} />
+            <Route exact path="/" render={() => {
+              return (<Login />)
+            }} />
             <Route
               exact
               path="/user"
@@ -124,6 +131,7 @@ class App extends React.Component {
                     getProject={this.getProject}
                     userName={this.state.userName}
                     project={this.state.project}
+                    acceptHolidays={this.acceptHolidays}
                   />
                 );
               }}
