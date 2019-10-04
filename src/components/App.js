@@ -172,6 +172,7 @@ class App extends React.Component {
                     users={this.state.users}
                     userLogin={this.state.userLogin}
                     time={this.state.time_off}
+                    userLoginId={this.state.employee_id}
                   />
                 );
               }}

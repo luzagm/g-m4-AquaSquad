@@ -7,23 +7,24 @@ import "../../stylesheets/App.scss";
 import Button from "../Button";
 import { Link } from "react-router-dom";
 
-const renderList = (users, holidaysData, userLoginId) => {
+const renderList = (data, holidaysData, userLoginId) => {
 
-  const user = users.find(user => {
+  const user = data.find(user => {
     return user.employee_id === userLoginId
   })
 
-  let userHolidays = holidaysData.filter(day => {
+  let validHolidays = holidaysData.filter(day => {
     if (!user) {
       return true
     }
-    return day.employee_id === user.employee_id
+    return day.employee_id === userLoginId
   })
-  return userHolidays.map((holiday, index) => {
-    const user = users.filter(user => {
+  return validHolidays.map((holiday, index) => {
+    const user = data.find(user => {
       return user.employee_id === holiday.employee_id
     })
     return (
+
       <ListUserItem userHolidays={holiday} data={user} key={index} />
     );
   })
@@ -36,7 +37,7 @@ const renderList = (users, holidaysData, userLoginId) => {
 // };
 
 const UserListGestor = props => {
-  const { users, holidays } = props;
+  const { users, holidays, userLoginId } = props;
   const holidaysData = holidays.holidays;
 
   return (
@@ -50,7 +51,7 @@ const UserListGestor = props => {
         <Link to="/" className="link__logOut"> Log out</Link>
         <h2 className="mainwrap__title">Solicitudes</h2>
         <ListUserStatus />
-        <ul>{renderList(users, holidaysData)}</ul>
+        <ul>{renderList(users, holidaysData, userLoginId)}</ul>
         <Link className="new__petition" to="/user/form">
           <Button name="Nueva petición" />
         </Link>
