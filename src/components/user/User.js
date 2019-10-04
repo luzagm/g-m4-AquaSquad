@@ -8,8 +8,9 @@ import Button from "../Button";
 import { Link } from "react-router-dom";
 
 const renderList = (data, holidaysData) => {
-  return holidaysData.map((user, index) => {
-    return <ListUserItem userHolidays={user} data={data[index]} key={index} />;
+  return holidaysData.map((holiday, index) => {
+    const user = data.find(user => user.employee_id === holiday.employee_id)
+    return <ListUserItem userHolidays={holiday} data={user} key={index} />;
   });
 };
 

@@ -11,23 +11,29 @@ import Button from "../Button";
 const renderList = (data, userName, project, holidaysData, acceptHolidays) => {
   const holidaysDate = holidaysData.holidays;
 
-  return data
-    .filter(user => {
-      return user.name.includes(userName);
+  const user = data.find(user => {
+    return user.name === userName
+  })
+
+  let validHolidays = holidaysDate.filter(day => {
+    if (!user) {
+      return true
+    }
+    return day.employee_id === user.employee_id
+  })
+  return validHolidays.map((holiday, index) => {
+    const user = data.find(user => {
+      return user.employee_id === holiday.employee_id
     })
-    // .filter(user => {
-    //   return user.project.includes(project);
-    // })
-    .map((user, index) => {
-      return (
-        <ListGestorItem
-          user={user}
-          holidays={holidaysDate[index]}
-          key={index}
-          acceptHolidays={acceptHolidays}
-        />
-      );
-    });
+    return (
+      <ListGestorItem
+        user={user}
+        holidays={holiday}
+        key={index}
+        acceptHolidays={acceptHolidays}
+      />
+    );
+  })
 };
 
 const GestorList = props => {

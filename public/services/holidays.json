@@ -42,6 +42,13 @@
       "earlier_fiscal_year": false,
       "overtime": false,
       "status": "company-holidays"
+    },
+    {
+      "date": "2019-10-03",
+      "employee_id": 3,
+      "earlier_fiscal_year": false,
+      "overtime": false,
+      "status": "rejected"
     }
   ]
 }

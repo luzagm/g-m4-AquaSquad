@@ -101,21 +101,18 @@ class App extends React.Component {
     })
     console.log(holidayUserLogin)
 
-    let listDays = []
-    const dayFormat = holidayUserLogin.map(dayHoliday => {
-      const holi = dayHoliday.date.replace(
+    let day = holidayUserLogin.find(dayHoliday => {
+      return holiday === dayHoliday.date.replace(
         /^(\d{4})-(\d{2})-(\d{2})$/g,
         "$3/$2/$1"
       )
-      listDays.push(holi)
     })
-    console.log(listDays)
-    // const dayChoosed = listDays.find(day => {
-    //   return day === holiday
-    // })
-
-    // console.log(dayChoosed)
-
+    console.log(day)
+    if (day) {
+      day.status = "approved"
+    } else {
+      console.error(`cannot find day for date ${holiday} in ${holidayUserLogin}`)
+    }
   }
 
   render() {
@@ -149,7 +146,7 @@ class App extends React.Component {
                 return (
                   <UserListGestor
                     holidays={this.state.holidays}
-                    data={this.state.users}
+                    users={this.state.users}
                   />
                 );
               }}

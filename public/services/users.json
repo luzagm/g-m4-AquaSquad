@@ -11,7 +11,7 @@
   },
   {
     "name": "Laura",
-    "email": "laurapareja@accenture.com",
+    "email": "1",
     "employee_id": 2,
     "chapter_id": 2,
     "chapter_name": "Front",
@@ -22,6 +22,7 @@
   {
     "name": "Luz",
     "email": "josemaria.delanieta@accenture.com",
+    "employee_id": 3,
     "chapter_id": 3,
     "chapter_name": "Front",
     "is_leader": false,
