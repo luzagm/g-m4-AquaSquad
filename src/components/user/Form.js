@@ -11,7 +11,7 @@ class Form extends React.Component {
     return (
       <React.Fragment>
         <main className="request__wrap row">
-          <AsideBar />
+          <AsideBar time={this.props.time} name={this.props.userLogin} />
 
           <div className="wrap__form col-9">
             <form className="request__form">
@@ -35,6 +35,7 @@ class Form extends React.Component {
                     placeholder="Chapter"
                   />
                 </div>
+
                 <div className="right-inputs">
                   <Input
                     classLabel="date"
