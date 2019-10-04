@@ -17,17 +17,26 @@ const ListGestorItem = props => {
   return (
     <div className="mainwrap__gestoritem row col-12">
       <p className="col-4">{holidayDate}</p>
-      <div className="mainwrap__gestoritem--status col-5">
+
+      <div className="mainwrap__gestoritem--status col-4">
         <Circle color={holidaysStatus} />
         <p>{user.name}</p>
       </div>
+
       <p className="col-3">{user.project}</p>
-      <Link to="gestor/confirmation/give" onClick={acceptHolidays}>
-        <button className="btn__green" type="radio" />
-      </Link>
-      <Link to="/reject">
-        <button className="btn__red" type="radio" />
-      </Link>
+
+      <div className="holidays__status--btn col-1">
+        <Link to="gestor/confirmation/give" onClick={acceptHolidays}>
+          <button className="btn__green" type="radio">
+            ✓
+          </button>
+        </Link>
+        <Link to="/reject">
+          <button className="btn__red" type="radio">
+            x
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };

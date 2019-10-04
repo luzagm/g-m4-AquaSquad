@@ -52,9 +52,9 @@ const GestorList = props => {
         <div className="mainwrap col-9">
           <div className="requestscontainer">
             <h2 className="mainwrap__title">Solicitudes</h2>
-            <p className="reset-btn" onClick={action}>
-              Reset filters
-            </p>
+            <button className="reset-btn" onClick={action}>
+              Reset
+            </button>
           </div>
           <Filters
             data={data}
