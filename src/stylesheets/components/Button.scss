@@ -1,15 +1,13 @@
-@import '../core/fonts.scss';
+@import "../core/fonts.scss";
 
 .btn {
-  font-family: 'Graphik-Semibold-Web';
-  width: 150px;
-  height: 36px;
+  font-family: "Graphik-Semibold-Web";
+  padding: 12px 25px;
   border-radius: 5px;
   background-color: #ffd000;
   color: black;
   font-size: 14px;
   font-weight: 600;
-  margin-top: 20px;
   border: none;
   font-style: normal;
   font-stretch: normal;

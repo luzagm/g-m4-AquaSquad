@@ -1,6 +1,9 @@
-@import '../core/fonts.scss';
+@import "../core/fonts.scss";
 
 .login__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 157px auto;
   width: 437.7px;
   height: 337.1px;
@@ -13,7 +16,7 @@
 .login__title {
   margin: 27.6px auto 25px;
   height: 46px;
-  font-family: 'Graphik-Bold-Web';
+  font-family: "Graphik-Bold-Web";
   font-size: 30px;
   font-weight: bold;
   font-style: normal;
@@ -34,7 +37,7 @@
   height: 44.4px;
   background-color: #eeeeee;
   border: none;
-  font-family: 'Graphik-Medium-Web';
+  font-family: "Graphik-Medium-Web";
 
   &::placeholder {
     padding-left: 17px;
@@ -49,6 +52,9 @@
   }
 }
 
-.login__button--container {
-  text-align: center;
+.login__button {
+  &--container {
+    display: flex;
+    justify-content: center;
+  }
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import AsideBar from "../AsideBar";
 import ListGestorItem from "./ListGestorItem";
 import ListGestorStatus from "./ListGestorStatus";
@@ -20,12 +21,14 @@ const renderList = (data, userName, project, holidaysData, acceptHolidays) => {
     })
     .map((user, index) => {
       return (
-        <ListGestorItem
-          user={user}
-          holidays={holidaysDate[index]}
-          key={index}
-          acceptHolidays={acceptHolidays}
-        />
+        <Link to="/gestor/details">
+          <ListGestorItem
+            user={user}
+            holidays={holidaysDate[index]}
+            key={index}
+            acceptHolidays={acceptHolidays}
+          />
+        </Link>
       );
     });
 };
@@ -59,7 +62,9 @@ const GestorList = props => {
             getProject={getProject}
           />
           <ListGestorStatus />
-          <ul>{renderList(data, userName, project, holidaysData, acceptHolidays)}</ul>
+          <ul>
+            {renderList(data, userName, project, holidaysData, acceptHolidays)}
+          </ul>
         </div>
       </div>
     </div>

@@ -15,10 +15,10 @@ const ConfirmationGestor = () => {
       <p className="confirmation__text">
         La solicitud de tus vacaciones:{" "}
         <span className="confirmation__date">13/09/2019</span> hasta{" "}
-        <span className="confirmation__date">16/09/2019</span> de Chema <strong>ha sido
-        aprobada</strong> correctamente.
+        <span className="confirmation__date">16/09/2019</span> de Chema{" "}
+        <strong>ha sido aprobada</strong> correctamente.
       </p>
-      <Link to="/user/gestor">
+      <Link to="/gestor">
         <Button name="Volver a solicitudes" />
       </Link>
     </div>

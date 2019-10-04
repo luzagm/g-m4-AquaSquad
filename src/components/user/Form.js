@@ -10,11 +10,10 @@ class Form extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <main className="request__wrap">
-          <div className="wrap__aside">
-            <AsideBar />
-          </div>
-          <div className="wrap__form">
+        <main className="request__wrap row">
+          <AsideBar className="col-3" />
+
+          <div className="wrap__form col-9">
             <form className="request__form">
               <h2 className="request__form--title">Solicitud de vacaciones</h2>
               <div className="request__form--inputs">
@@ -51,14 +50,17 @@ class Form extends React.Component {
                 </div>
               </div>
 
-              <Link to="/gestor/confirmation">
-                <Button className="request__form--submitButton" name="Enviar" />
+              <Link
+                className="request__form--buttonbox"
+                to="/gestor/confirmation"
+              >
+                <Button name="Enviar" />
               </Link>
             </form>
-            <Button
-              className="request__form--submitButton"
-              name="Añadir otra petición"
-            />
+
+            <div className="request__form--addButtonBox">
+              <Button name="Añadir otra petición" />
+            </div>
           </div>
         </main>
       </React.Fragment>

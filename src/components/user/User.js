@@ -1,11 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import ListUserItem from "./ListUserItem";
 import ListUserStatus from "./ListUserStatus";
 import AsideBar from "../AsideBar";
 import "../../stylesheets/components/User.scss";
 import "../../stylesheets/App.scss";
 import Button from "../Button";
-import { Link } from "react-router-dom";
 
 const renderList = (data, holidaysData) => {
   return holidaysData.map((user, index) => {
@@ -22,12 +22,15 @@ const UserList = props => {
       <AsideBar />
       <div className="mainwrap col-9">
         <h2 className="mainwrap__title">Solicitudes</h2>
+
         <ListUserStatus />
+
         <ul>{renderList(data, holidaysData)}</ul>
+
+        <Link className="new__petition" to="/user/form">
+          <Button name="Nueva petición" />
+        </Link>
       </div>
-      <Link to="/user/form">
-        <Button name="Nueva petición" />
-      </Link>
     </div>
   );
 };
