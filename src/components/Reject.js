@@ -10,17 +10,17 @@ import "../stylesheets/components/Confirmation.scss";
 
 const Reject = () => {
   return (
-    <div className="confirmation__wrap">
-      <h2 className="confirmation__title">Solicitud de vacaciones</h2>
-      <p className="confirmation__text">
-        La solicitud de tus vacaciones:{" "}
-        <span className="confirmation__date">13/09/2019</span> hasta{" "}
-        <span className="confirmation__date">16/09/2019</span> ha sido denegada.
-        Lo sentimos.
+    <div className="confirmation__container">
+      <div className="confirmation__wrap">
+        <h2 className="confirmation__title">Solicitud de vacaciones Denegada</h2>
+        <p className="confirmation__text">
+          La solicitud de las vacaciones de {"AQUI VA EL USUARIO"} para el día <span className="confirmation__date">13/09/2019</span> ha sido <strong>denegada</strong>.
+          Lo sentimos.
       </p>
-      <Link to="/user/gestor">
-        <Button name="Volver a solicitudes" />;
-      </Link>
+        <Link to="/gestor">
+          <Button name="Volver a solicitudes" />
+        </Link>
+      </div>
     </div>
   );
 };

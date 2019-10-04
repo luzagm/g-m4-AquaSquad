@@ -1,17 +1,17 @@
 [
   {
-    "name": "Chema",
-    "email": "josemaria.delanieta@accenture.com",
+    "name": "Mari Carmen",
+    "email": "mari",
     "chapter_id": 1,
     "employee_id": 1,
     "chapter_name": "Front",
     "is_leader": false,
-    "time_off": 20,
+    "time_off": 5,
     "project": "Waldus"
   },
   {
-    "name": "Laura",
-    "email": "1",
+    "name": "Laura Pareja",
+    "email": "laura",
     "employee_id": 2,
     "chapter_id": 2,
     "chapter_name": "Front",
@@ -20,8 +20,8 @@
     "project": "Liquid Squad"
   },
   {
-    "name": "Luz",
-    "email": "josemaria.delanieta@accenture.com",
+    "name": "Luz Aguirre",
+    "email": "luz",
     "employee_id": 3,
     "chapter_id": 3,
     "chapter_name": "Front",
@@ -30,8 +30,9 @@
     "project": "Lorem Ipsum Squad"
   },
   {
-    "name": "Isa",
+    "name": "Isa Pizarro",
     "email": "josemaria.delanieta@accenture.com",
+    "employee_id": 4,
     "chapter_id": 4,
     "chapter_name": "Mobile",
     "is_leader": false,
@@ -39,8 +40,9 @@
     "project": "Liquid Squad"
   },
   {
-    "name": "Sara",
+    "name": "Sara Marín",
     "email": "josemaria.delanieta@accenture.com",
+    "employee_id": 5,
     "chapter_id": 5,
     "chapter_name": "Back",
     "is_leader": false,
@@ -48,8 +50,9 @@
     "project": "Wadus"
   },
   {
-    "name": "Ana",
+    "name": "Paura Ortiz",
     "email": "josemaria.delanieta@accenture.com",
+    "employee_id": 6,
     "chapter_id": 6,
     "chapter_name": "DevOps",
     "is_leader": false,

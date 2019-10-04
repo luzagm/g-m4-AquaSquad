@@ -38,7 +38,7 @@ class App extends React.Component {
     this.getUserData = this.getUserData.bind(this);
     this.getHolidaysData = this.getHolidaysData.bind(this);
     this.acceptHolidays = this.acceptHolidays.bind(this);
-
+    this.rejectHolidays = this.rejectHolidays.bind(this);
   }
 
   componentDidMount() {
@@ -94,12 +94,9 @@ class App extends React.Component {
 
   acceptHolidays(holiday, user) {
     const idUser = user.employee_id;
-
-    console.log(holiday)
     const holidayUserLogin = this.state.holidays.holidays.filter(holiday => {
       return holiday.employee_id === idUser
     })
-    console.log(holidayUserLogin)
 
     let day = holidayUserLogin.find(dayHoliday => {
       return holiday === dayHoliday.date.replace(
@@ -107,9 +104,26 @@ class App extends React.Component {
         "$3/$2/$1"
       )
     })
-    console.log(day)
     if (day) {
       day.status = "approved"
+    } else {
+      console.error(`cannot find day for date ${holiday} in ${holidayUserLogin}`)
+    }
+  }
+  rejectHolidays(holiday, user) {
+    const idUser = user.employee_id;
+    const holidayUserLogin = this.state.holidays.holidays.filter(holiday => {
+      return holiday.employee_id === idUser
+    })
+
+    let day = holidayUserLogin.find(dayHoliday => {
+      return holiday === dayHoliday.date.replace(
+        /^(\d{4})-(\d{2})-(\d{2})$/g,
+        "$3/$2/$1"
+      )
+    })
+    if (day) {
+      day.status = "rejected"
     } else {
       console.error(`cannot find day for date ${holiday} in ${holidayUserLogin}`)
     }
@@ -119,14 +133,19 @@ class App extends React.Component {
     if (this.state === []) {
       return <p>Loading</p>;
     }
+
     return (
       <div className="App">
         <main className="main container-fluid">
           <Header />
           <Switch>
-            <Route exact path="/" render={() => {
-              return (<Login actionSendUserLogin={this.actionSendUserLogin} />)
-            }} />
+            <Route
+              exact
+              path="/"
+              render={() => {
+                return <Login actionSendUserLogin={this.actionSendUserLogin} />;
+              }}
+            />
             <Route
               exact
               path="/user"
@@ -134,7 +153,11 @@ class App extends React.Component {
                 return (
                   <UserList
                     data={this.state.users}
+                    userLogin={this.state}
                     holidays={this.state.holidays}
+                    userLogin={this.state.userLogin}
+                    time={this.state.time_off}
+                    userLoginId={this.state.employee_id}
                   />
                 );
               }}
@@ -147,11 +170,23 @@ class App extends React.Component {
                   <UserListGestor
                     holidays={this.state.holidays}
                     users={this.state.users}
+                    userLogin={this.state.userLogin}
+                    time={this.state.time_off}
                   />
                 );
               }}
             />
-            <Route path="/user/form" component={Form} />
+            <Route
+              path="/user/form"
+              render={() => {
+                return (
+                  <Form
+                    userLogin={this.state.userLogin}
+                    time={this.state.time_off}
+                  />
+                );
+              }}
+            />
             <Route exact path="/user/confirmation" component={Confirmation} />
             <Route
               exact
@@ -167,6 +202,9 @@ class App extends React.Component {
                     userName={this.state.userName}
                     project={this.state.project}
                     acceptHolidays={this.acceptHolidays}
+                    rejectHolidays={this.rejectHolidays}
+                    userLogin={this.state.userLogin}
+                    time={this.state.time_off}
                   />
                 );
               }}

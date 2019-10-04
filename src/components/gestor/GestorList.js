@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import AsideBar from "../AsideBar";
 import ListGestorItem from "./ListGestorItem";
 import ListGestorStatus from "./ListGestorStatus";
@@ -8,9 +9,8 @@ import "../../stylesheets/App.scss";
 import Button from "../Button";
 // import { Link } from "react-router-dom";
 
-const renderList = (data, userName, project, holidaysData, acceptHolidays) => {
+const renderList = (data, userName, project, holidaysData, acceptHolidays, rejectHolidays) => {
   const holidaysDate = holidaysData.holidays;
-
   const user = data.find(user => {
     return user.name === userName
   })
@@ -31,6 +31,7 @@ const renderList = (data, userName, project, holidaysData, acceptHolidays) => {
         holidays={holiday}
         key={index}
         acceptHolidays={acceptHolidays}
+        rejectHolidays={rejectHolidays}
       />
     );
   })
@@ -45,19 +46,25 @@ const GestorList = props => {
     project,
     getProject,
     holidaysData,
-    acceptHolidays
+    acceptHolidays,
+    rejectHolidays
   } = props;
 
   return (
     <div className="gestormain col-12">
       <div className="mainwrap__gestor row">
-        <AsideBar btnChange={<Button name="Cambiar a Solicitudes" />} />
+        <AsideBar
+          time={props.time}
+          name={props.userLogin}
+          btnChange={<Button name="Cambiar a Solicitudes" />}
+        />
         <div className="mainwrap col-9">
           <div className="requestscontainer">
+            <Link to="/" className="link__logOut"> Log out</Link>
             <h2 className="mainwrap__title">Solicitudes</h2>
-            <p className="reset-btn" onClick={action}>
-              Reset filters
-            </p>
+            <button className="reset-btn" onClick={action}>
+              Reset
+            </button>
           </div>
           <Filters
             data={data}
@@ -65,7 +72,9 @@ const GestorList = props => {
             getProject={getProject}
           />
           <ListGestorStatus />
-          <ul>{renderList(data, userName, project, holidaysData, acceptHolidays)}</ul>
+          <ul>
+            {renderList(data, userName, project, holidaysData, acceptHolidays, rejectHolidays)}
+          </ul>
         </div>
       </div>
     </div>
