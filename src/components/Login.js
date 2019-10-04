@@ -82,29 +82,32 @@ class Login extends React.Component {
 
     console.log("laurapareja@accenture.com");
     console.log("josemaria.delanieta@accenture.com");
+
     return (
       <React.Fragment>
         <div className="login__container">
-          <h1 className="login__title">LOGIN</h1>
-          <form onSubmit={this.action} method="post">
-            <Input
-              type="text"
-              placeholder="Usuario"
-              actionInput={this.sendLogin}
-            />
-            <Input
-              type="password"
-              placeholder="Contraseña"
-              actionInput={this.actionPassword}
-            />
-            <Link
-              onClick={this.actionButtonLogin}
-              className="login__button--container"
-              to={this.getLinkButton()}
-            >
-              <Button className="login__button--enter" name="Acceder" />
-            </Link>
-          </form>
+          <div className="login__box">
+            <h1 className="login__title">LOGIN</h1>
+            <form onSubmit={this.action} method="post">
+              <Input
+                type="text"
+                placeholder="Usuario"
+                actionInput={this.sendLogin}
+              />
+              <Input
+                type="password"
+                placeholder="Contraseña"
+                actionInput={this.actionPassword}
+              />
+              <Link
+                onClick={this.actionButtonLogin}
+                className="login__button--container"
+                to={this.getLinkButton()}
+              >
+                <Button className="login__button--enter" name="Acceder" />
+              </Link>
+            </form>
+          </div>
         </div>
       </React.Fragment>
     );

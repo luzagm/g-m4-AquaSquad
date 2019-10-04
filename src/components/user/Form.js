@@ -3,7 +3,7 @@ import AsideBar from "../AsideBar";
 import Input from "./Inputs";
 import { Link } from "react-router-dom";
 import Button from "../Button";
-import "../../stylesheets/Form.scss";
+import "../../stylesheets/components/Form.scss";
 import "../../assets/icons/calendar-icon.svg";
 
 class Form extends React.Component {
@@ -11,7 +11,7 @@ class Form extends React.Component {
     return (
       <React.Fragment>
         <main className="request__wrap row">
-          <AsideBar className="col-3" />
+          <AsideBar />
 
           <div className="wrap__form col-9">
             <form className="request__form">
