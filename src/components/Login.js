@@ -17,11 +17,14 @@ class Login extends React.Component {
       project: '',
       password: false,
     };
+    this.actionSendUserLogin = props.actionSendUserLogin;
     this.sendLogin = this.sendLogin.bind(this);
     this.sendPassword = this.sendPassword.bind(this);
     this.actionButtonLogin = this.actionButtonLogin.bind(this);
-    this.getLinkButton = this.getLinkButton.bind(this)
+    this.getLinkButton = this.getLinkButton.bind(this);
   }
+
+
   componentDidMount() {
     this.getUserData();
   }
@@ -43,6 +46,7 @@ class Login extends React.Component {
     }
   }
 
+
   sendLogin(event) {
     const userLogin = event.currentTarget.value;
     const emailUser = this.state.users.find(user => {
@@ -58,15 +62,19 @@ class Login extends React.Component {
     }
   }
 
-  actionButtonLogin(event) {
+  actionButtonLogin(event, actionSendUserLogin) {
     if (this.state.password === false || this.state.username === "") {
       event.preventDefault()
       alert('Login incorrecto')
     } else {
-      this.getLinkButton()
+      this.actionSendUserLogin(this.state);
+      this.getLinkButton();
     }
-
   }
+  actionSendUserLogin(login) {
+    return login
+  }
+
   getLinkButton() {
     if (this.state.is_leader === false && this.state.password === true) {
       return "/user"
