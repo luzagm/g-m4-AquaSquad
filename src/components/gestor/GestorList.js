@@ -15,9 +15,9 @@ const renderList = (data, userName, project, holidaysData, acceptHolidays) => {
     .filter(user => {
       return user.name.includes(userName);
     })
-    .filter(user => {
-      return user.project.includes(project);
-    })
+    // .filter(user => {
+    //   return user.project.includes(project);
+    // })
     .map((user, index) => {
       return (
         <ListGestorItem

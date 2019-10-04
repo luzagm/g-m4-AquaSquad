@@ -12,6 +12,7 @@ class Login extends React.Component {
     this.state = {
       users: [],
       username: "",
+      userLogin: "",
       is_leader: "",
       time_off: '',
       project: '',
@@ -54,7 +55,7 @@ class Login extends React.Component {
     })
     if (emailUser) {
       this.setState({
-        username: emailUser.name,
+        userLogin: emailUser.name,
         is_leader: emailUser.is_leader,
         time_off: emailUser.time_off,
         project: emailUser.project,
@@ -63,7 +64,7 @@ class Login extends React.Component {
   }
 
   actionButtonLogin(event, actionSendUserLogin) {
-    if (this.state.password === false || this.state.username === "") {
+    if (this.state.password === false || this.state.userLogin === "") {
       event.preventDefault()
       alert('Login incorrecto')
     } else {
