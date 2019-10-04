@@ -1,6 +1,6 @@
 ## Liquid Holiday Manager
 
-Aplicación web para gestionar las vacaciones de los empleados de Liquid Squad (https://www.accenture.com/es-es/service-liquid-squad-accenture-digital). Consta por un lado de la parte de solicitante y por otro la parte del gestor encargado de aprobar o rechazar cada solicitud.
+Aplicación web para gestionar las vacaciones de los empleados de [Liquid Squad](https://www.accenture.com/es-es/service-liquid-squad-accenture-digital). Consta por un lado de la parte de solicitante y por otro la parte del gestor encargado de aprobar o rechazar cada solicitud.
 
 ### Pasos para utilizar la aplicación:
 
@@ -16,9 +16,9 @@ Aplicación web para gestionar las vacaciones de los empleados de Liquid Squad (
 
 ## Equipo - AQUA SQUAD -
 
-- Luz Aguirre: https://github.com/luzagm
-- Laura Pareja: https://github.com/laurapareja
-- Ana Amaro: https://github.com/AnaAmaro
-- Sara Marín: https://github.com/saramarin23
-- Isabel Pizarro: https://github.com/IsabelPizarro
+- Luz Aguirre: [GitHub](https://github.com/luzagm)
+- Laura Pareja: [GitHub](https://github.com/laurapareja)
+- Ana Amaro: [GitHub](https://github.com/AnaAmaro)
+- Sara Marín: [GitHub](https://github.com/saramarin23)
+- Isabel Pizarro: [GitHub](https://github.com/IsabelPizarro)
 
