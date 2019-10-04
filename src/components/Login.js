@@ -16,6 +16,7 @@ class Login extends React.Component {
       is_leader: "",
       time_off: '',
       project: '',
+      employee_id: '',
       password: false,
     };
     this.actionSendUserLogin = props.actionSendUserLogin;
@@ -59,6 +60,7 @@ class Login extends React.Component {
         is_leader: emailUser.is_leader,
         time_off: emailUser.time_off,
         project: emailUser.project,
+        employee_id: emailUser.employee_id
       })
     }
   }

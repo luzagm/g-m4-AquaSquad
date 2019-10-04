@@ -17,8 +17,8 @@ const dataurl = "./services/users.json";
 const holidaysurl = "./services/holidays.json";
 
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       users: [],
       holidays: [],
@@ -27,7 +27,7 @@ class App extends React.Component {
       userLogin: "",
       is_leader: "",
       time_off: '',
-
+      employee_id: ''
     };
     this.getUserData = this.getUserData.bind(this);
     this.getHolidaysData = this.getHolidaysData.bind(this);
@@ -37,6 +37,8 @@ class App extends React.Component {
     this.actionSendUserLogin = this.actionSendUserLogin.bind(this);
     this.getUserData = this.getUserData.bind(this);
     this.getHolidaysData = this.getHolidaysData.bind(this);
+    this.acceptHolidays = this.acceptHolidays.bind(this);
+
   }
 
   componentDidMount() {
@@ -78,29 +80,48 @@ class App extends React.Component {
     const selectUserName = event.currentTarget.value;
     this.setState({ userName: selectUserName });
   }
-  acceptHolidays(holidayDate, user) {
-    console.log(holidayDate)
-    console.log(user)
-    console.log('accepting holidays')
-  }
+
 
   actionSendUserLogin = (login) => {
-    console.log(login)
     return this.setState({
       userLogin: login.userLogin,
       is_leader: login.is_leader,
       time_off: login.time_off,
       project: login.project,
+      employee_id: login.employee_id
     })
   }
 
+  acceptHolidays(holiday, user) {
+    const idUser = user.employee_id;
+
+    console.log(holiday)
+    const holidayUserLogin = this.state.holidays.holidays.filter(holiday => {
+      return holiday.employee_id === idUser
+    })
+    console.log(holidayUserLogin)
+
+    let listDays = []
+    const dayFormat = holidayUserLogin.map(dayHoliday => {
+      const holi = dayHoliday.date.replace(
+        /^(\d{4})-(\d{2})-(\d{2})$/g,
+        "$3/$2/$1"
+      )
+      listDays.push(holi)
+    })
+    console.log(listDays)
+    // const dayChoosed = listDays.find(day => {
+    //   return day === holiday
+    // })
+
+    // console.log(dayChoosed)
+
+  }
 
   render() {
     if (this.state === []) {
       return <p>Loading</p>;
     }
-    console.log(this.state)
-
     return (
       <div className="App">
         <main className="main container-fluid">
