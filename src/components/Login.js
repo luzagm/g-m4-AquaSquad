@@ -12,15 +12,19 @@ class Login extends React.Component {
     this.state = {
       users: [],
       username: "",
+      userLogin: "",
       is_leader: "",
       time_off: "",
-      project: ""
+      project: "",
+      password: false
     };
+    this.actionSendUserLogin = props.actionSendUserLogin;
     this.sendLogin = this.sendLogin.bind(this);
     this.sendPassword = this.sendPassword.bind(this);
     this.actionButtonLogin = this.actionButtonLogin.bind(this);
     this.getLinkButton = this.getLinkButton.bind(this);
   }
+
   componentDidMount() {
     this.getUserData();
   }
@@ -35,10 +39,10 @@ class Login extends React.Component {
 
   sendPassword(event) {
     const userPassword = event.currentTarget.value;
-    this.setState({ userPassword: userPassword });
-
-    if (userPassword === "vacapollo") {
-      console.log(`Contraseña correcto`);
+    if (userPassword !== "") {
+      this.setState({ password: true });
+    } else {
+      this.setState({ password: false });
     }
   }
 
@@ -47,30 +51,31 @@ class Login extends React.Component {
     const emailUser = this.state.users.find(user => {
       return user.email === userLogin;
     });
-
-    if (userLogin === emailUser.email) {
+    if (emailUser) {
       this.setState({
-        username: emailUser.name,
+        userLogin: emailUser.name,
         is_leader: emailUser.is_leader,
         time_off: emailUser.time_off,
         project: emailUser.project
       });
     }
-
-    if (userLogin === "laurapareja@accenture.com") {
-      console.log("Mail correcto");
-      this.setState({ usermail: userLogin });
-    }
   }
 
-  actionButtonLogin(event) {
-    if (this.state.is_leader === "") {
+  actionButtonLogin(event, actionSendUserLogin) {
+    if (this.state.password === false || this.state.userLogin === "") {
       event.preventDefault();
       alert("Login incorrecto");
+    } else {
+      this.actionSendUserLogin(this.state);
+      this.getLinkButton();
     }
   }
+  actionSendUserLogin(login) {
+    return login;
+  }
+
   getLinkButton() {
-    if (this.state.is_leader === false) {
+    if (this.state.is_leader === false && this.state.password === true) {
       return "/user";
     } else {
       return "/user/gestor";
@@ -79,9 +84,8 @@ class Login extends React.Component {
 
   render() {
     const { props } = this;
-
-    console.log("laurapareja@accenture.com");
-    console.log("josemaria.delanieta@accenture.com");
+    // console.log('laurapareja@accenture.com')
+    // console.log('josemaria.delanieta@accenture.com')
 
     return (
       <React.Fragment>
@@ -97,11 +101,11 @@ class Login extends React.Component {
               <Input
                 type="password"
                 placeholder="Contraseña"
-                actionInput={this.actionPassword}
+                actionInput={this.sendPassword}
               />
               <Link
-                onClick={this.actionButtonLogin}
                 className="login__button--container"
+                onClick={this.actionButtonLogin}
                 to={this.getLinkButton()}
               >
                 <Button className="login__button--enter" name="Acceder" />

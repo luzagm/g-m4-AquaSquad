@@ -24,6 +24,9 @@ class App extends React.Component {
       holidays: [],
       userName: "",
       project: "",
+      userLogin: "",
+      is_leader: "",
+      time_off: '',
 
     };
     this.getUserData = this.getUserData.bind(this);
@@ -31,6 +34,7 @@ class App extends React.Component {
     this.getUserName = this.getUserName.bind(this);
     this.getProject = this.getProject.bind(this);
     this.clearFilters = this.clearFilters.bind(this);
+    this.actionSendUserLogin = this.actionSendUserLogin.bind(this);
     this.getUserData = this.getUserData.bind(this);
     this.getHolidaysData = this.getHolidaysData.bind(this);
   }
@@ -74,15 +78,28 @@ class App extends React.Component {
     const selectUserName = event.currentTarget.value;
     this.setState({ userName: selectUserName });
   }
-  acceptHolidays(event) {
-    console.dir(event)
+  acceptHolidays(holidayDate, user) {
+    console.log(holidayDate)
+    console.log(user)
     console.log('accepting holidays')
   }
+
+  actionSendUserLogin = (login) => {
+    console.log(login)
+    return this.setState({
+      userLogin: login.userLogin,
+      is_leader: login.is_leader,
+      time_off: login.time_off,
+      project: login.project,
+    })
+  }
+
 
   render() {
     if (this.state === []) {
       return <p>Loading</p>;
     }
+    console.log(this.state)
 
     return (
       <div className="App">
@@ -90,7 +107,7 @@ class App extends React.Component {
           <Header />
           <Switch>
             <Route exact path="/" render={() => {
-              return (<Login />)
+              return (<Login actionSendUserLogin={this.actionSendUserLogin} />)
             }} />
             <Route
               exact

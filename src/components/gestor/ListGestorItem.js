@@ -14,6 +14,10 @@ const ListGestorItem = props => {
   const holidaysStatus = holidays.status;
   // const idUser =
 
+  const handleConfirmationHolidays = () => {
+    acceptHolidays(holidayDate, user);
+  };
+
   return (
     <div className="mainwrap__gestoritem row col-12">
       <p className="col-4">{holidayDate}</p>
@@ -26,7 +30,10 @@ const ListGestorItem = props => {
       <p className="col-3">{user.project}</p>
 
       <div className="holidays__status--btn col-1">
-        <Link to="gestor/confirmation/give" onClick={acceptHolidays}>
+        <Link
+          to="gestor/confirmation/give"
+          onClick={handleConfirmationHolidays}
+        >
           <button className="btn__green" type="radio">
             ✓
           </button>
