@@ -24,6 +24,9 @@ class App extends React.Component {
       holidays: [],
       userName: "",
       project: "",
+      userLogin: "",
+      is_leader: "",
+      time_off: '',
 
     };
     this.getUserData = this.getUserData.bind(this);
@@ -75,14 +78,16 @@ class App extends React.Component {
     const selectUserName = event.currentTarget.value;
     this.setState({ userName: selectUserName });
   }
-  acceptHolidays(event) {
-    console.dir(event)
+  acceptHolidays(holidayDate, user) {
+    console.log(holidayDate)
+    console.log(user)
     console.log('accepting holidays')
   }
 
   actionSendUserLogin = (login) => {
+    console.log(login)
     return this.setState({
-      username: login.username,
+      userLogin: login.userLogin,
       is_leader: login.is_leader,
       time_off: login.time_off,
       project: login.project,
