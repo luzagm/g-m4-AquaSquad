@@ -54,6 +54,7 @@ const GestorList = props => {
     <div className="gestormain col-12">
       <div className="mainwrap__gestor row">
         <AsideBar
+          picture={props.picture}
           time={props.time}
           name={props.userLogin}
           btnChange={<Button name="Cambiar a Solicitudes" />}

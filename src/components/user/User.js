@@ -36,7 +36,7 @@ const UserList = props => {
 
   return (
     <div className="mainwrapmain row">
-      <AsideBar time={props.time} name={props.userLogin} />
+      <AsideBar picture={props.picture} time={props.time} name={props.userLogin} />
       <div className="mainwrap col-9">
         <Link to="/" className="link__logOut"> Log out</Link>
         <h2 className="mainwrap__title">Solicitudes</h2>

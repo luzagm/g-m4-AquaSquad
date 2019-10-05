@@ -60,6 +60,7 @@ class Login extends React.Component {
         time_off: emailUser.time_off,
         project: emailUser.project,
         employee_id: emailUser.employee_id,
+        picture: emailUser.picture
       })
     }
   }

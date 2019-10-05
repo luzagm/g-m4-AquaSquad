@@ -14,7 +14,7 @@ const Reject = () => {
       <div className="confirmation__wrap">
         <h2 className="confirmation__title">Solicitud de vacaciones Denegada</h2>
         <p className="confirmation__text">
-          La solicitud de las vacaciones de {"AQUI VA EL USUARIO"} para el día <span className="confirmation__date">13/09/2019</span> ha sido <strong>denegada</strong>.
+          La solicitud de las vacaciones de <strong>Sara Marín</strong> para el día <span className="confirmation__date">09/10/2019</span> ha sido <strong>denegada</strong>.
           Lo sentimos.
       </p>
         <Link to="/gestor">

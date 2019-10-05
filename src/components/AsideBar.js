@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const AsideBar = props => {
   return (
     <div className="asidebar__container col-3">
-      <img src={doll} alt="doll" className="asidebar__img"></img>
+      <img src={props.picture} alt="doll" className="asidebar__img"></img>
       <h4 className="asidebar__name">{props.name}</h4>
       <h5 className="asidebar__job">Digital Bus Integration Analyst</h5>
       <div className="asidebar__paid">

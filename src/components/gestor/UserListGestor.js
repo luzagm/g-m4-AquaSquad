@@ -43,6 +43,7 @@ const UserListGestor = props => {
   return (
     <div className="mainwrapmain row">
       <AsideBar
+        picture={props.picture}
         time={props.time}
         name={props.userLogin}
         btn={<Button name="Cambiar a Gestión" />}

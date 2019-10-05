@@ -6,12 +6,46 @@ import Button from "../Button";
 import "../../stylesheets/components/Form.scss";
 import "../../assets/icons/calendar-icon.svg";
 
+const renderProject = data => {
+  return data.map((user, index) => {
+    return (
+      <option value={user.project} key={index}>
+        {user.project}
+      </option>
+    );
+  });
+};
+
 class Form extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      date: "",
+      project: ""
+    }
+  }
+
   render() {
+    const {
+      props,
+    } = this;
+
+    // const handleDateRequest = (event) => {
+    //   const dateRequest = event.currentTarget.value;
+    //   this.setState({
+    //     date: dateRequest
+    //   })
+    // }
+
+    // const handleRequest = () => {
+    //   const date = this.state.date;
+    //   props.actionDateRequest(date)
+    // }
+
     return (
       <React.Fragment>
         <main className="request__wrap row">
-          <AsideBar time={this.props.time} name={this.props.userLogin} />
+          <AsideBar time={props.time} name={props.userLogin} />
 
           <div className="wrap__form col-9">
             <form className="request__form">
@@ -22,19 +56,31 @@ class Form extends React.Component {
                     classLabel="date"
                     classInput="request__date"
                     label="Desde"
-                    placeholder="13/09/2019"
                     type="date"
+                  // actionInput={handleDateRequest}
                   />
-                  <Input
-                    classInput="request__job"
-                    type="select"
-                    placeholder="Jefe de proyecto"
-                  />
-                  <Input
+                  {/* hacemos un select para agilizar la demo */}
+                  <select
+                    className="request__leader "
+                    name="ProjectLeader"
+                  >
+                    <option value="">Jefe de proyecto</option>
+                    <option value="">Isabel Pizarro</option>
+                  </select>
+
+                  <select
+                    className="request__project"
+                    name="project"
+                    onChange={props.getProject}
+                  >
+                    <option value="">Proyecto</option>
+                    {renderProject(props.data)}
+                  </select>
+                  {/* <Input
                     classInput="request__chapter"
                     type="select"
                     placeholder="Chapter"
-                  />
+                  /> */}
                 </div>
 
                 <div className="right-inputs">
@@ -56,6 +102,7 @@ class Form extends React.Component {
               <Link
                 className="request__form--buttonbox"
                 to="/gestor/confirmation"
+              // onClick={handleRequest}
               >
                 <Button name="Enviar" />
               </Link>
@@ -72,7 +119,7 @@ class Form extends React.Component {
           </div>
         </main>
       </React.Fragment>
-    );
+    )
   }
 }
 

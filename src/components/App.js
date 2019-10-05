@@ -27,7 +27,8 @@ class App extends React.Component {
       userLogin: "",
       is_leader: "",
       time_off: '',
-      employee_id: ''
+      employee_id: '',
+      picture: '',
     };
     this.getUserData = this.getUserData.bind(this);
     this.getHolidaysData = this.getHolidaysData.bind(this);
@@ -88,7 +89,8 @@ class App extends React.Component {
       is_leader: login.is_leader,
       time_off: login.time_off,
       project: login.project,
-      employee_id: login.employee_id
+      employee_id: login.employee_id,
+      picture: login.picture,
     })
   }
 
@@ -129,10 +131,27 @@ class App extends React.Component {
     }
   }
 
+
   render() {
     if (this.state === []) {
       return <p>Loading</p>;
     }
+    // const idLogin = this.state.employee_id
+    // const actionDateRequest = (dateRequest, idLogin) => {
+    //   this.setState({
+    //     holidays: [
+    //       ...
+    //       {
+    //         "date": { dateRequest },
+    //         "employee_id": { idLogin },
+    //         "earlier_fiscal_year": false,
+    //         "overtime": false,
+    //         "status": "pending"
+    //       }
+    //     ]
+    //   })
+    //   console.log(this.state.holidays)
+    // }
 
     return (
       <div className="App">
@@ -158,6 +177,7 @@ class App extends React.Component {
                     userLogin={this.state.userLogin}
                     time={this.state.time_off}
                     userLoginId={this.state.employee_id}
+                    picture={this.state.picture}
                   />
                 );
               }}
@@ -173,6 +193,8 @@ class App extends React.Component {
                     userLogin={this.state.userLogin}
                     time={this.state.time_off}
                     userLoginId={this.state.employee_id}
+                    picture={this.state.picture}
+
                   />
                 );
               }}
@@ -184,6 +206,9 @@ class App extends React.Component {
                   <Form
                     userLogin={this.state.userLogin}
                     time={this.state.time_off}
+                    getProject={this.getProject}
+                    data={this.state.users}
+                  // actionDateRequest={actionDateRequest}
                   />
                 );
               }}
@@ -206,6 +231,7 @@ class App extends React.Component {
                     rejectHolidays={this.rejectHolidays}
                     userLogin={this.state.userLogin}
                     time={this.state.time_off}
+                    picture={this.state.picture}
                   />
                 );
               }}

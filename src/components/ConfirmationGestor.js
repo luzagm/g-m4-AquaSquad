@@ -16,7 +16,7 @@ const ConfirmationGestor = () => {
           Solicitud de vacaciones Aprobada
         </h2>
         <p className="confirmation__text">
-          La solicitud de las vacaciones de {"AQUI VA EL USUARIO"} para el día <span className="confirmation__date">13/09/2019</span> ha sido <strong>aprobada</strong> correctamente.
+          La solicitud de las vacaciones de <strong>Sara Marin</strong> para el día <span className="confirmation__date">08/10/2019</span> ha sido <strong>aprobada</strong> correctamente.
         </p>
         <Link to="/gestor">
           <Button name="Volver a solicitudes" />

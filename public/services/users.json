@@ -1,62 +1,35 @@
 [
   {
-    "name": "Mari Carmen",
-    "email": "mari",
-    "chapter_id": 1,
+    "name": "Isa Pizarro",
+    "email": "chabeli@liquidsquad.com",
     "employee_id": 1,
-    "chapter_name": "Front",
-    "is_leader": false,
-    "time_off": 5,
-    "project": "Waldus"
+    "chapter_id": 1,
+    "chapter_name": "Mobile",
+    "is_leader": true,
+    "time_off": 20,
+    "project": "Liquid Squad",
+    "picture": "../chabeli.png"
   },
   {
-    "name": "Laura Pareja",
-    "email": "laura",
+    "name": "Mari Carmen",
+    "email": "maricarmen@liquidsquad.com",
     "employee_id": 2,
     "chapter_id": 2,
     "chapter_name": "Front",
-    "is_leader": true,
-    "time_off": 20,
-    "project": "Liquid Squad"
-  },
-  {
-    "name": "Luz Aguirre",
-    "email": "luz",
-    "employee_id": 3,
-    "chapter_id": 3,
-    "chapter_name": "Front",
     "is_leader": false,
-    "time_off": 20,
-    "project": "Lorem Ipsum Squad"
-  },
-  {
-    "name": "Isa Pizarro",
-    "email": "josemaria.delanieta@accenture.com",
-    "employee_id": 4,
-    "chapter_id": 4,
-    "chapter_name": "Mobile",
-    "is_leader": false,
-    "time_off": 20,
-    "project": "Liquid Squad"
+    "time_off": 5,
+    "project": "Equipo 4",
+    "picture": "../doll.png"
   },
   {
     "name": "Sara Marín",
-    "email": "josemaria.delanieta@accenture.com",
-    "employee_id": 5,
-    "chapter_id": 5,
+    "email": "saramarin@liquidsquad.com",
+    "employee_id": 3,
+    "chapter_id": 3,
     "chapter_name": "Back",
     "is_leader": false,
-    "time_off": 20,
-    "project": "Wadus"
-  },
-  {
-    "name": "Paura Ortiz",
-    "email": "josemaria.delanieta@accenture.com",
-    "employee_id": 6,
-    "chapter_id": 6,
-    "chapter_name": "DevOps",
-    "is_leader": false,
-    "time_off": 20,
-    "project": "Liquid Squad"
+    "time_off": 10,
+    "project": "Equipo 5",
+    "picture": "../saramarin.png"
   }
 ]
