@@ -136,22 +136,6 @@ class App extends React.Component {
     if (this.state === []) {
       return <p>Loading</p>;
     }
-    // const idLogin = this.state.employee_id
-    // const actionDateRequest = (dateRequest, idLogin) => {
-    //   this.setState({
-    //     holidays: [
-    //       ...
-    //       {
-    //         "date": { dateRequest },
-    //         "employee_id": { idLogin },
-    //         "earlier_fiscal_year": false,
-    //         "overtime": false,
-    //         "status": "pending"
-    //       }
-    //     ]
-    //   })
-    //   console.log(this.state.holidays)
-    // }
 
     return (
       <div className="App">
@@ -208,7 +192,7 @@ class App extends React.Component {
                     time={this.state.time_off}
                     getProject={this.getProject}
                     data={this.state.users}
-                  // actionDateRequest={actionDateRequest}
+                    picture={this.state.picture}
                   />
                 );
               }}
@@ -236,7 +220,15 @@ class App extends React.Component {
                 );
               }}
             />
-            <Route exact path="/gestor/details" component={GestorDetails} />
+            <Route exact path="/gestor/details"
+              render={() => {
+                return (
+                  <GestorDetails
+                    picture={this.state.picture}
+                  />
+                );
+              }} />
+
             <Route exact path="/gestor/confirmation" component={Confirmation} />
             <Route
               exact

@@ -24,17 +24,10 @@ const renderList = (data, holidaysData, userLoginId) => {
       return user.employee_id === holiday.employee_id
     })
     return (
-
       <ListUserItem userHolidays={holiday} data={user} key={index} />
     );
   })
 };
-// const renderList = (users, holidaysData) => {
-//   return holidaysData.map((holiday, index) => {
-//     const user = users.find(user => user.employee_id === holiday.employee_id)
-//     return <ListUserItem userHolidays={holiday} data={user} key={index} />;
-//   });
-// };
 
 const UserListGestor = props => {
   const { users, holidays, userLoginId } = props;

@@ -12,7 +12,6 @@ const ListGestorItem = props => {
   );
 
   const holidaysStatus = holidays.status;
-  // const idUser =
 
   const handleConfirmationHolidays = () => {
     acceptHolidays(holidayDate, user);

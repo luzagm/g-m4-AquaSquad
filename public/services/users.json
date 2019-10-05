@@ -1,7 +1,7 @@
 [
   {
     "name": "Isa Pizarro",
-    "email": "chabeli@liquidsquad.com",
+    "email": "chabeli@accenture.com",
     "employee_id": 1,
     "chapter_id": 1,
     "chapter_name": "Mobile",
@@ -12,7 +12,7 @@
   },
   {
     "name": "Mari Carmen",
-    "email": "maricarmen@liquidsquad.com",
+    "email": "maricarmen@accenture.com",
     "employee_id": 2,
     "chapter_id": 2,
     "chapter_name": "Front",
@@ -23,7 +23,7 @@
   },
   {
     "name": "Sara Marín",
-    "email": "saramarin@liquidsquad.com",
+    "email": "saramarin@accenture.com",
     "employee_id": 3,
     "chapter_id": 3,
     "chapter_name": "Back",
@@ -31,5 +31,16 @@
     "time_off": 10,
     "project": "Equipo 5",
     "picture": "../saramarin.png"
+  },
+  {
+    "name": "Alberto Ocaña",
+    "email": "alberto.ocana.perez@accenture.com",
+    "employee_id": 4,
+    "chapter_id": 3,
+    "chapter_name": "Back",
+    "is_leader": false,
+    "time_off": 10,
+    "project": "Liquid Squad",
+    "picture": "../manUser.png"
   }
 ]

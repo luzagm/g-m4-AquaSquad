@@ -7,7 +7,6 @@ import Filters from "../Filters";
 import "../../stylesheets/components/Gestor.scss";
 import "../../stylesheets/App.scss";
 import Button from "../Button";
-// import { Link } from "react-router-dom";
 
 const renderList = (data, userName, project, holidaysData, acceptHolidays, rejectHolidays) => {
   const holidaysDate = holidaysData.holidays;
@@ -26,13 +25,15 @@ const renderList = (data, userName, project, holidaysData, acceptHolidays, rejec
       return user.employee_id === holiday.employee_id
     })
     return (
-      <ListGestorItem
-        user={user}
-        holidays={holiday}
-        key={index}
-        acceptHolidays={acceptHolidays}
-        rejectHolidays={rejectHolidays}
-      />
+      <Link to="/gestor/details">
+        <ListGestorItem
+          user={user}
+          holidays={holiday}
+          key={index}
+          acceptHolidays={acceptHolidays}
+          rejectHolidays={rejectHolidays}
+        />
+      </Link>
     );
   })
 };

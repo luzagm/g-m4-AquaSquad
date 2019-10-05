@@ -7,7 +7,7 @@ const ListGestorDetail = props => {
   return (
     <div className="detailmain">
       <h2 className="detailwrap__title">Solicitudes proyecto Wadus</h2>
-      <GestorDetailInfo />
+      <GestorDetailInfo time={props.time} name={props.userLogin} />
     </div>
   );
 };

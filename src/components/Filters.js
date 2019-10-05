@@ -20,15 +20,15 @@ const renderName = data => {
   });
 };
 
-const renderProject = data => {
-  return data.map((user, index) => {
-    return (
-      <option value={user.project} key={index}>
-        {user.project}
-      </option>
-    );
-  });
-};
+// const renderProject = data => {
+//   return data.map((user, index) => {
+//     return (
+//       <option value={user.project} key={index}>
+//         {user.project}
+//       </option>
+//     );
+//   });
+// };
 
 const Filters = props => {
   const { data, getUserName, getProject } = props;

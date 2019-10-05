@@ -90,8 +90,6 @@ class Login extends React.Component {
   render() {
     const { props } = this;
     const { error } = this.state;
-    // console.log('laurapareja@accenture.com')
-    // console.log('josemaria.delanieta@accenture.com')
 
     return (
       <React.Fragment>

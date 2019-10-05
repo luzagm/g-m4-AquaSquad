@@ -30,22 +30,10 @@ class Form extends React.Component {
       props,
     } = this;
 
-    // const handleDateRequest = (event) => {
-    //   const dateRequest = event.currentTarget.value;
-    //   this.setState({
-    //     date: dateRequest
-    //   })
-    // }
-
-    // const handleRequest = () => {
-    //   const date = this.state.date;
-    //   props.actionDateRequest(date)
-    // }
-
     return (
       <React.Fragment>
         <main className="request__wrap row">
-          <AsideBar time={props.time} name={props.userLogin} />
+          <AsideBar time={props.time} name={props.userLogin} picture={props.picture} />
 
           <div className="wrap__form col-9">
             <form className="request__form">
@@ -57,7 +45,6 @@ class Form extends React.Component {
                     classInput="request__date"
                     label="Desde"
                     type="date"
-                  // actionInput={handleDateRequest}
                   />
                   {/* hacemos un select para agilizar la demo */}
                   <select
@@ -80,7 +67,9 @@ class Form extends React.Component {
                     classInput="request__chapter"
                     type="select"
                     placeholder="Chapter"
-                  /> */}
+                  /> 
+                  para meter un input para los departamentos
+                  */}
                 </div>
 
                 <div className="right-inputs">
@@ -102,7 +91,6 @@ class Form extends React.Component {
               <Link
                 className="request__form--buttonbox"
                 to="/gestor/confirmation"
-              // onClick={handleRequest}
               >
                 <Button name="Enviar" />
               </Link>
