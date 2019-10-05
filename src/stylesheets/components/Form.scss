@@ -1,21 +1,15 @@
-@import './variables.scss';
+@import "../core/variables";
 
 .request__form {
   width: 700px;
-  height: 389px;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
   background-color: #ffffff;
-  margin: 22px 250px 0 490px;
+  padding: 30px;
 
   &--title {
-    margin: 31px auto 17px;
-    width: 283px;
-    // height: 29px;
-    font-family: 'Graphik-Bold-Web';
+    font-family: "Graphik-Bold-Web";
     font-size: 24px;
-    margin: 31px 387px 17px 30px;
     color: $colorSecundary;
-    padding-top: 31px;
     font-weight: bold;
   }
 
@@ -24,7 +18,7 @@
   }
 
   &--label {
-    font-family: 'Graphik-Medium-Web';
+    font-family: "Graphik-Medium-Web";
     font-size: 12px;
     font-weight: 500;
     font-style: normal;
@@ -40,6 +34,7 @@
   }
 
   &--input {
+    margin-bottom: 10px;
     font-size: 14px;
     height: 45px;
     width: 310px;
@@ -48,7 +43,7 @@
     color: #b1b1b1;
 
     &::placeholder {
-      padding-left: 19px;
+      padding-left: 15px;
       //font-family: Graphik;
       font-size: 14px;
       font-weight: 500;
@@ -59,28 +54,24 @@
     }
   }
 
-  &--submitButton {
-    width: 150px;
-    height: 36px;
-    border-radius: 5px;
-    background-color: #eeeeee;
-    font-size: 14px;
+  &--buttonbox {
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 0px 280px 29px 270px;
-    color: #b1b1b1;
-    border-style: none;
+    margin-top: 10px;
+  }
+
+  &--addButtonBox {
+    width: 700px;
+    display: flex;
+    margin-top: 20px;
+    justify-content: flex-end;
   }
 }
 
-.left-inputs {
-  margin-left: 30px;
-}
-
-.request__job {
-  margin: 22px 16px 20px auto;
+.request__project, .request__leader {
+  margin: 10px 16px 10px auto;
+  width: 96%;
+  padding:7px 0;
   border-radius: 5px;
   border: solid 1px #ebeced;
   background-color: #ffffff;
@@ -97,6 +88,7 @@
 }
 
 .request__chapter {
+  display: flex;
   border-radius: 5px;
   border: solid 1px #ebeced;
   background-color: #ffffff;
@@ -114,9 +106,8 @@
 
 .request__text {
   display: flex;
-  margin: 0 0 20px;
   width: 310px;
-  height: 112px;
+  height: 108px;
   border: solid 1px #ebeced;
   background-color: #eeeeee;
 
@@ -127,19 +118,7 @@
   }
 }
 
-.wrap__aside {
-  display: grid;
-  grid-column: 1 / 4;
-}
-
-.wrap__form {
-  display: grid;
-  //padding: 0 75px 0 30px;
-  //height: 30px;
-  grid-column: 4 / 12;
-}
-
 .request__wrap {
-  display: grid;
-  height: 900px;
+  margin: 20px 380px;
+  height: 100vh;
 }

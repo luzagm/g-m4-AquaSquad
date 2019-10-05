@@ -14,6 +14,8 @@ class Input extends React.Component {
           className={`request__form--input ${this.props.classInput}`}
           type={this.props.type}
           placeholder={this.props.placeholder}
+          onChange={this.props.actionInput}
+          pattern={this.props.pattern}
           required
         />
       </div>

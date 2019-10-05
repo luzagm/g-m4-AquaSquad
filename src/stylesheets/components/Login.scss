@@ -1,9 +1,17 @@
-@import '../core/fonts.scss';
+@import "../core/fonts.scss";
 
 .login__container {
-  margin: 157px auto;
-  width: 437.7px;
-  height: 337.1px;
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.login__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 435px;
   border-radius: 10px;
   box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.5);
   border: solid 1px #eeeeee;
@@ -13,7 +21,7 @@
 .login__title {
   margin: 27.6px auto 25px;
   height: 46px;
-  font-family: 'Graphik-Bold-Web';
+  font-family: "Graphik-Bold-Web";
   font-size: 30px;
   font-weight: bold;
   font-style: normal;
@@ -34,7 +42,7 @@
   height: 44.4px;
   background-color: #eeeeee;
   border: none;
-  font-family: 'Graphik-Medium-Web';
+  font-family: "Graphik-Medium-Web";
 
   &::placeholder {
     padding-left: 17px;
@@ -49,6 +57,14 @@
   }
 }
 
-.login__button--container {
-  text-align: center;
+.login__button {
+  &--container {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+  }
+}
+
+.login__error--text {
+  color: red;
 }

@@ -17,21 +17,29 @@ const dataurl = "./services/users.json";
 const holidaysurl = "./services/holidays.json";
 
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       users: [],
       holidays: [],
       userName: "",
-      project: ""
+      project: "",
+      userLogin: "",
+      is_leader: "",
+      time_off: '',
+      employee_id: '',
+      picture: '',
     };
     this.getUserData = this.getUserData.bind(this);
     this.getHolidaysData = this.getHolidaysData.bind(this);
     this.getUserName = this.getUserName.bind(this);
     this.getProject = this.getProject.bind(this);
     this.clearFilters = this.clearFilters.bind(this);
+    this.actionSendUserLogin = this.actionSendUserLogin.bind(this);
     this.getUserData = this.getUserData.bind(this);
     this.getHolidaysData = this.getHolidaysData.bind(this);
+    this.acceptHolidays = this.acceptHolidays.bind(this);
+    this.rejectHolidays = this.rejectHolidays.bind(this);
   }
 
   componentDidMount() {
@@ -74,6 +82,56 @@ class App extends React.Component {
     this.setState({ userName: selectUserName });
   }
 
+
+  actionSendUserLogin = (login) => {
+    return this.setState({
+      userLogin: login.userLogin,
+      is_leader: login.is_leader,
+      time_off: login.time_off,
+      project: login.project,
+      employee_id: login.employee_id,
+      picture: login.picture,
+    })
+  }
+
+  acceptHolidays(holiday, user) {
+    const idUser = user.employee_id;
+    const holidayUserLogin = this.state.holidays.holidays.filter(holiday => {
+      return holiday.employee_id === idUser
+    })
+
+    let day = holidayUserLogin.find(dayHoliday => {
+      return holiday === dayHoliday.date.replace(
+        /^(\d{4})-(\d{2})-(\d{2})$/g,
+        "$3/$2/$1"
+      )
+    })
+    if (day) {
+      day.status = "approved"
+    } else {
+      console.error(`cannot find day for date ${holiday} in ${holidayUserLogin}`)
+    }
+  }
+  rejectHolidays(holiday, user) {
+    const idUser = user.employee_id;
+    const holidayUserLogin = this.state.holidays.holidays.filter(holiday => {
+      return holiday.employee_id === idUser
+    })
+
+    let day = holidayUserLogin.find(dayHoliday => {
+      return holiday === dayHoliday.date.replace(
+        /^(\d{4})-(\d{2})-(\d{2})$/g,
+        "$3/$2/$1"
+      )
+    })
+    if (day) {
+      day.status = "rejected"
+    } else {
+      console.error(`cannot find day for date ${holiday} in ${holidayUserLogin}`)
+    }
+  }
+
+
   render() {
     if (this.state === []) {
       return <p>Loading</p>;
@@ -84,7 +142,13 @@ class App extends React.Component {
         <main className="main container-fluid">
           <Header />
           <Switch>
-            <Route exact path="/" component={Login} />
+            <Route
+              exact
+              path="/"
+              render={() => {
+                return <Login actionSendUserLogin={this.actionSendUserLogin} />;
+              }}
+            />
             <Route
               exact
               path="/user"
@@ -93,6 +157,10 @@ class App extends React.Component {
                   <UserList
                     data={this.state.users}
                     holidays={this.state.holidays}
+                    userLogin={this.state.userLogin}
+                    time={this.state.time_off}
+                    userLoginId={this.state.employee_id}
+                    picture={this.state.picture}
                   />
                 );
               }}
@@ -104,12 +172,30 @@ class App extends React.Component {
                 return (
                   <UserListGestor
                     holidays={this.state.holidays}
-                    data={this.state.users}
+                    users={this.state.users}
+                    userLogin={this.state.userLogin}
+                    time={this.state.time_off}
+                    userLoginId={this.state.employee_id}
+                    picture={this.state.picture}
+
                   />
                 );
               }}
             />
-            <Route path="/user/form" component={Form} />
+            <Route
+              path="/user/form"
+              render={() => {
+                return (
+                  <Form
+                    userLogin={this.state.userLogin}
+                    time={this.state.time_off}
+                    getProject={this.getProject}
+                    data={this.state.users}
+                    picture={this.state.picture}
+                  />
+                );
+              }}
+            />
             <Route exact path="/user/confirmation" component={Confirmation} />
             <Route
               exact
@@ -124,11 +210,24 @@ class App extends React.Component {
                     getProject={this.getProject}
                     userName={this.state.userName}
                     project={this.state.project}
+                    acceptHolidays={this.acceptHolidays}
+                    rejectHolidays={this.rejectHolidays}
+                    userLogin={this.state.userLogin}
+                    time={this.state.time_off}
+                    picture={this.state.picture}
                   />
                 );
               }}
             />
-            <Route exact path="/gestor/details" component={GestorDetails} />
+            <Route exact path="/gestor/details"
+              render={() => {
+                return (
+                  <GestorDetails
+                    picture={this.state.picture}
+                  />
+                );
+              }} />
+
             <Route exact path="/gestor/confirmation" component={Confirmation} />
             <Route
               exact

@@ -1,58 +1,46 @@
 [
   {
-    "name": "Chema",
-    "email": "josemaria.delanieta@accenture.com",
-    "chapter_id": 1,
+    "name": "Isa Pizarro",
+    "email": "chabeli@accenture.com",
     "employee_id": 1,
-    "chapter_name": "Front",
-    "is_leader": false,
+    "chapter_id": 1,
+    "chapter_name": "Mobile",
+    "is_leader": true,
     "time_off": 20,
-    "project": "Waldus"
+    "project": "Liquid Squad",
+    "picture": "../chabeli.png"
   },
   {
-    "name": "Laura",
-    "email": "josemaria.delanieta@accenture.com",
+    "name": "Mari Carmen",
+    "email": "maricarmen@accenture.com",
     "employee_id": 2,
     "chapter_id": 2,
     "chapter_name": "Front",
     "is_leader": false,
-    "time_off": 20,
-    "project": "Liquid Squad"
+    "time_off": 5,
+    "project": "Equipo 4",
+    "picture": "../doll.png"
   },
   {
-    "name": "Luz",
-    "email": "josemaria.delanieta@accenture.com",
+    "name": "Sara Marín",
+    "email": "saramarin@accenture.com",
+    "employee_id": 3,
     "chapter_id": 3,
-    "chapter_name": "Front",
-    "is_leader": false,
-    "time_off": 20,
-    "project": "Lorem Ipsum Squad"
-  },
-  {
-    "name": "Isa",
-    "email": "josemaria.delanieta@accenture.com",
-    "chapter_id": 4,
-    "chapter_name": "Mobile",
-    "is_leader": false,
-    "time_off": 20,
-    "project": "Liquid Squad"
-  },
-  {
-    "name": "Sara",
-    "email": "josemaria.delanieta@accenture.com",
-    "chapter_id": 5,
     "chapter_name": "Back",
     "is_leader": false,
-    "time_off": 20,
-    "project": "Wadus"
+    "time_off": 10,
+    "project": "Equipo 5",
+    "picture": "../saramarin.png"
   },
   {
-    "name": "Ana",
-    "email": "josemaria.delanieta@accenture.com",
-    "chapter_id": 6,
-    "chapter_name": "DevOps",
+    "name": "Alberto Ocaña",
+    "email": "alberto.ocana.perez@accenture.com",
+    "employee_id": 4,
+    "chapter_id": 3,
+    "chapter_name": "Back",
     "is_leader": false,
-    "time_off": 20,
-    "project": "Liquid Squad"
+    "time_off": 10,
+    "project": "Liquid Squad",
+    "picture": "../manUser.png"
   }
 ]
