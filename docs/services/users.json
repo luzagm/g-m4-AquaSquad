@@ -8,7 +8,7 @@
     "is_leader": true,
     "time_off": 20,
     "project": "Liquid Squad",
-    "picture": "../assets/images/chabeli.png"
+    "picture": "https://beta.adalab.es/g-m4-AquaSquad/public/images/chabeli.png"
   },
   {
     "name": "Mari Carmen",
@@ -19,7 +19,7 @@
     "is_leader": false,
     "time_off": 5,
     "project": "Equipo 4",
-    "picture": "../assets/images/doll.png"
+    "picture": "https://beta.adalab.es/g-m4-AquaSquad/public/images/doll.png"
   },
   {
     "name": "Sara Marín",
@@ -30,7 +30,7 @@
     "is_leader": false,
     "time_off": 10,
     "project": "Equipo 5",
-    "picture": "../assets/images/saramarin.png"
+    "picture": "https://beta.adalab.es/g-m4-AquaSquad/public/images/saramarin.png"
   },
   {
     "name": "Alberto Ocaña",
@@ -41,6 +41,6 @@
     "is_leader": false,
     "time_off": 10,
     "project": "Liquid Squad",
-    "picture": "../assets/images/manUser.png"
+    "picture": "https://beta.adalab.es/g-m4-AquaSquad/public/images/manUser.png"
   }
 ]
