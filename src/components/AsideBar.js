@@ -1,5 +1,4 @@
 import React from "react";
-import doll from "../assets/images/doll.png";
 import "../stylesheets/components/AsideBar.scss";
 import "../stylesheets/components/Button.scss";
 import { Link } from "react-router-dom";

@@ -23,13 +23,6 @@
       "status": "rejected"
     },
     {
-      "date": "2019-10-04",
-      "employee_id": 1,
-      "earlier_fiscal_year": false,
-      "overtime": false,
-      "status": "enjoyed"
-    },
-    {
       "date": "2019-10-08",
       "employee_id": 3,
       "earlier_fiscal_year": false,
@@ -51,39 +44,11 @@
       "status": "pending"
     },
     {
-      "date": "2019-10-14",
-      "employee_id": 1,
-      "earlier_fiscal_year": false,
-      "overtime": false,
-      "status": "pending"
-    },
-    {
       "date": "2019-10-15",
       "employee_id": 1,
       "earlier_fiscal_year": false,
       "overtime": false,
       "status": "approved"
-    },
-    {
-      "date": "2019-10-24",
-      "employee_id": 1,
-      "earlier_fiscal_year": false,
-      "overtime": false,
-      "status": "pending"
-    },
-    {
-      "date": "2019-11-12",
-      "employee_id": 2,
-      "earlier_fiscal_year": false,
-      "overtime": false,
-      "status": "pending"
-    },
-    {
-      "date": "2019-11-14",
-      "employee_id": 2,
-      "earlier_fiscal_year": false,
-      "overtime": false,
-      "status": "company-holidays"
     },
     {
       "date": "2019-12-9",

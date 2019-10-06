@@ -156,7 +156,6 @@ class App extends React.Component {
                 return (
                   <UserList
                     data={this.state.users}
-                    userLogin={this.state}
                     holidays={this.state.holidays}
                     userLogin={this.state.userLogin}
                     time={this.state.time_off}

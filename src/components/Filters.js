@@ -31,7 +31,7 @@ const renderName = data => {
 // };
 
 const Filters = props => {
-  const { data, getUserName, getProject } = props;
+  const { data, getUserName } = props;
 
   return (
     <form className="gestor__wrap--filter">

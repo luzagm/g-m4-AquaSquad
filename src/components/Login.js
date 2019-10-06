@@ -88,7 +88,6 @@ class Login extends React.Component {
   }
 
   render() {
-    const { props } = this;
     const { error } = this.state;
 
     return (
