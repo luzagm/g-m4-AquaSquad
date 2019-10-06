@@ -24,3 +24,30 @@
   display: flex;
   justify-content: flex-end;
 }
+
+.mainwrap__btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+.logout-btn {
+  margin-right: 30px;
+  padding: 8px 25px;
+  font-family: Graphik;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #069ffb;
+  background-color: white;
+  border: solid 2px #ebeced;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

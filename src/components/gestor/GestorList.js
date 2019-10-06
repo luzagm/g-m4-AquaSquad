@@ -8,22 +8,29 @@ import "../../stylesheets/components/Gestor.scss";
 import "../../stylesheets/App.scss";
 import Button from "../Button";
 
-const renderList = (data, userName, project, holidaysData, acceptHolidays, rejectHolidays) => {
+const renderList = (
+  data,
+  userName,
+  project,
+  holidaysData,
+  acceptHolidays,
+  rejectHolidays
+) => {
   const holidaysDate = holidaysData.holidays;
   const user = data.find(user => {
-    return user.name === userName
-  })
+    return user.name === userName;
+  });
 
   let validHolidays = holidaysDate.filter(day => {
     if (!user) {
-      return true
+      return true;
     }
-    return day.employee_id === user.employee_id
-  })
+    return day.employee_id === user.employee_id;
+  });
   return validHolidays.map((holiday, index) => {
     const user = data.find(user => {
-      return user.employee_id === holiday.employee_id
-    })
+      return user.employee_id === holiday.employee_id;
+    });
     return (
       <Link to="/gestor/details">
         <ListGestorItem
@@ -35,7 +42,7 @@ const renderList = (data, userName, project, holidaysData, acceptHolidays, rejec
         />
       </Link>
     );
-  })
+  });
 };
 
 const GestorList = props => {
@@ -62,20 +69,32 @@ const GestorList = props => {
         />
         <div className="mainwrap col-9">
           <div className="requestscontainer">
-            <Link to="/" className="link__logOut"> Log out</Link>
             <h2 className="mainwrap__title">Solicitudes</h2>
+            <Link to="/" className="link__logOut">
+              <button className="logout-gestor-btn">Log out</button>
+            </Link>
+          </div>
+
+          <div className="filters-line">
+            <Filters
+              data={data}
+              getUserName={getUserName}
+              getProject={getProject}
+            />
             <button className="reset-btn" onClick={action}>
               Reset
             </button>
           </div>
-          <Filters
-            data={data}
-            getUserName={getUserName}
-            getProject={getProject}
-          />
           <ListGestorStatus />
           <ul>
-            {renderList(data, userName, project, holidaysData, acceptHolidays, rejectHolidays)}
+            {renderList(
+              data,
+              userName,
+              project,
+              holidaysData,
+              acceptHolidays,
+              rejectHolidays
+            )}
           </ul>
         </div>
       </div>

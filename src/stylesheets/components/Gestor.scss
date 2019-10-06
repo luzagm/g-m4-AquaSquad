@@ -19,6 +19,33 @@
   padding-right: 15px;
 }
 
+.logout-gestor-btn {
+  padding: 8px 25px;
+  font-family: Graphik;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #069ffb;
+  background-color: white;
+  border: solid 2px #ebeced;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.filters-line {
+  padding: 0 30px 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: white;
+}
+
 .reset-btn {
   padding: 8px 25px;
   font-family: Graphik;
